@@ -1,0 +1,9 @@
+teste
+
+!define COMMAND_PATTERN {%m -r fitnesse.fitserver.FitServer,fit.dll %p}
+!define TEST_RUNNER {Runner.exe}
+!path D:\Thoris\Projetos\CI\CISample\CI.Sample.Fit.Tests\bin\Release\CI.Sample.Fit.Tests.dll
+
+!|CI.Sample.Fit.Tests.ConcatenationTest|
+|string1    |string2   |Concatenate?   |
+|Hello      |World     |Hello World    |

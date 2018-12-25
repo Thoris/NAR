@@ -1,0 +1,478 @@
+<html>
+	<head>
+		<title>Vil - Metrics</title>
+	</head>
+<Body alink="#e00000" link="#0000ff" vlink="#5858e8" leftmargin=0 rightmargin=0 bgcolor=ffffff >
+		<center>
+			<table width="774" border="0" cellpadding="0" cellspacing="0" ID="Table2">
+<tr ><td ><img src="vil.png"></td><td colspan=2 ><font size=8 color=darkblue>&nbsp;&nbsp;&nbsp;Command-line Metrics...</font></td></tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top"><br>
+						<a href="./screens.html"><img src="ascr.png" width="80" height="20" border="0"></a><br>
+						<br>
+						<a href="./cmetrics.html"><img src="amet.png" width="80" height="20" border="0"></a><br>
+						<br>
+						<a href="./docs.html"><img src="adoc.png" width="80" height="20" border="0"></a><br>
+						<br>
+						<a href="mailto:info@1bot.com"><img src="acon.png" width="80" height="20" border="0"></a><br>
+					</td>
+					<td>
+						<TABLE id="Table1" cellSpacing="1" cellPadding="1" border="1">
+							<TR>
+								<TD width="112"><FONT size="4">Metric</FONT></TD>
+								<TD width="200"><FONT size="4">Description</FONT></TD>
+								<TD><IMG alt="" src="assembly.png"></TD>
+								<TD><IMG alt="" src="module.png"></TD>
+								<TD><IMG alt="" src="class.png"></TD>
+								<TD><IMG alt="" src="struct.png"></TD>
+								<TD><IMG alt="" src="interface.png"></TD>
+								<TD><IMG alt="" src="enum.png"></TD>
+								<TD width="26"><IMG alt="" src="constructor.png"></TD>
+								<TD><IMG alt="" src="method.png"></TD>
+							</TR>
+							<TR>
+								<TD width="112">modules</TD>
+								<TD>
+									<FONT size="2">Number of Modules in an Assembly.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">impTypes</TD>
+								<TD><FONT size="2">Number of Types that can have implementations.&nbsp; This is the sum 
+										of classes and structs.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">abstracts</TD>
+								<TD><FONT size="2">Number of defined interfaces and abstract classes.&nbsp; </FONT>
+								</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">eCouplings</TD>
+								<TD><FONT size="2">Efferent Couplings.  The number of types inside the "subject" module/assembly that depend on types in other modules/assemblies.&nbsp; </FONT>
+								</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">aCouplings</TD>
+								<TD><FONT size="2">Afferent Couplings.  The number of types in other modules/assemblies that depend on types within the "subject" module/assembly.&nbsp; </FONT>
+								</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">abstractness</TD>
+								<TD><FONT size="2">Abstractness.  The percentage of all types that are abstract.  Abstract types include Interfaces and Abstract Classes.&nbsp; </FONT>
+								</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">instability</TD>
+								<TD><FONT size="2">Instability.  This is the result of eCouplings / (eCouplings + aCouplings).  A value of '0' indicates stability, and '1' indicates instability.  The more a "subject" module depends on other modules, relative to the extent that other modules depend on the "subject" module, the more Instable the module. &nbsp; </FONT>
+								</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">distance</TD>
+								<TD><FONT size="2">Distance.  The balance between Instability and Abstractness, and is computed as "|(Abstractness + Instability - 1)/2|".  The optimal number is "0", as "0" represents a balance between Abstractness and Instability.
+&nbsp; </FONT>
+								</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">classes</TD>
+								<TD><FONT size="2">Number of classes.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">interfaces</TD>
+								<TD><FONT size="2">Number of defined interfaces.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">enumerations</TD>
+								<TD><FONT size="2">Number of enumerations.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">structs</TD>
+								<TD><FONT size="2">Number of structs.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">types</TD>
+								<TD><FONT size="2">Number of Types.&nbsp; This is the sum of classes, enumerations, 
+										interfaces, and structs.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">LOC</TD>
+								<TD><FONT size="2">Lines of Code - not source code, but IL (Intermediate 
+										Language)&nbsp;instructions.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">dead</TD>
+								<TD><FONT size="2">Number of IL instructions within methods and constructors that are 
+										unreachable.</FONT></TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">events</TD>
+								<TD><FONT size="2">Number of events.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">impInterfaces</TD>
+								<TD><FONT size="2">Number of interfaces implemented by a class or struct, or inherited 
+										from for an interface.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">WMC</TD>
+								<TD><FONT size="2">Weighted Methods per Class.&nbsp; This is the sum of Cyclomatic 
+										Complexity of all methods and constructors in a class or struct.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">DIT</TD>
+								<TD><FONT size="2">Depth in Tree.&nbsp; Inheritence depth.&nbsp; System.Object has a 
+										depth of 0.&nbsp; All others will have a depth of 1 or more.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">CBO</TD>
+								<TD><FONT size="2">Coupling Between Objects.&nbsp; Number of other classes on which a 
+										given class depends.&nbsp; Classes in the base-class libraries are not counted.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">LCOM</TD>
+								<TD><FONT size="2">Lack of Cohesion of Methods.&nbsp; Extent to which instance methods 
+										use the instance fields of a class/struct. &nbsp; Static methods and fields, 
+										and all forms of constructors are not counted. The range is 0 to 1, with 0 
+										indicating no lack of cohesion, and 1 indicating a total lack of cohesion. A 
+										lower number is generally more desirable.  <i>This implementation of LCOM only 
+                                                                                looks at instance fields and methods and ignores statics.  Also, abstract 
+                                                                                classes are ignored, as are classes that inherit from anything other than 
+                                                                                System.Object.  This constraint is limiting, however - computing LCOM on 
+                                                                                inherited methods/fields also leads to many odd and unmeaningful results.  
+                                                                                Vil limits applicability of LCOM to cases where LCOM's meaning is clear and applicable.</i> </FONT>
+								</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">RFC</TD>
+								<TD><FONT size="2">Response for a Class.&nbsp; Total number of methods&nbsp;in the 
+										class added with the total number of methods called by methods in the 
+										class.&nbsp;</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">NOC</TD>
+								<TD><FONT size="2">Number of Children.&nbsp; Number of classes that directly inherit 
+										from this class.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">properties</TD>
+								<TD><FONT size="2">Number of properties defined in the class/struct.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">constructors</TD>
+								<TD><FONT size="2">Number of constructors for a Type.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">methods</TD>
+								<TD><FONT size="2">Number of methods defined within a class/struct/interface.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">imps</TD>
+								<TD><FONT size="2">Number of implementations.&nbsp; Implementations are defined as 
+										constructors and methods.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">fields</TD>
+								<TD><FONT size="2">Number of fields within a Type.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+								<TD width="26">&nbsp;</TD>
+								<TD>&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">CC</TD>
+								<TD><FONT size="2">Cyclomatic Complexity.&nbsp; Number of paths though a method.&nbsp; 
+										The higher the number, the more testing effort will be required to cover all 
+										paths.&nbsp; A method with no conditional constructs will have a CC of 1. 
+                                                                                <i>If a method/constructor has a "switch" statement, the CC metric may return a number
+                                                                                that is a few(2-3) higher than it would intuitively be - depending on the compiler that was used.  
+                                                                                This is because some .Net compilers generate "odd" IL code to implement the "switch".</i></FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">params</TD>
+								<TD><FONT size="2">Number of parameters of a method.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">maxStack</TD>
+								<TD><FONT size="2">Maximum&nbsp;size of the evaluation stack of a method or 
+										constructor&nbsp;at runtime.  <i>Vil does not use the maxstack that is
+                                                                                 generated by compilers and persisted in .Net assemblies/modules.  Vil 
+                                                                                 computes maxstack independently.</i></FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">locals</TD>
+								<TD><FONT size="2">Number of local variables used within a method or constructor.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+							<TR>
+								<TD width="112">tryblocks</TD>
+								<TD><FONT size="2">Number of "try" blocks within a method/constructor.</FONT></TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD>&nbsp;</TD>
+								<TD width="26" bgColor="#99ff66">&nbsp;</TD>
+								<TD bgColor="#99ff66">&nbsp;</TD>
+							</TR>
+						</TABLE>
+						<br>
+						<br>
+						<center>
+							<font size="2" color="darkblue">©2003-2004 1bot.com. All rights reserved.</font></center>
+					</td>
+					<td width="1"></td>
+				</tr>
+			</table>
+		</center>
+	</Body>
+</html>

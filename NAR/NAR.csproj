@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4014E958-01B5-43CF-A03C-BACB17E190B0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NAR</RootNamespace>
+    <AssemblyName>NAR</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DSHOWNET;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;DSHOWNET;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\NAR.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARKit\ARToolKit.cs" />
+    <Compile Include="ArManagement\ARParamFile.cs" />
+    <Compile Include="ArManagement\Config\ARConfiguration.cs" />
+    <Compile Include="ArManagement\Config\ARImageProcMode.cs" />
+    <Compile Include="ArManagement\Decomp.cs" />
+    <Compile Include="ArManagement\Labeling.cs" />
+    <Compile Include="ArManagement\Marker.cs" />
+    <Compile Include="ArManagement\MarkerInfo.cs" />
+    <Compile Include="ArManagement\Matrix.cs" />
+    <Compile Include="ArManagement\Objects\ARMarkerInfo.cs" />
+    <Compile Include="ArManagement\Objects\ARMarkerInfo2.cs" />
+    <Compile Include="ArManagement\Objects\ARMat.cs" />
+    <Compile Include="ArManagement\Objects\ARParam.cs" />
+    <Compile Include="ArManagement\Objects\ARSParam.cs" />
+    <Compile Include="ArManagement\Objects\ARVec.cs" />
+    <Compile Include="ArManagement\Objects\ARPrevInfo.cs" />
+    <Compile Include="ArManagement\Objects\ARSwapDoubleT.cs" />
+    <Compile Include="ArManagement\Objects\ARSwapIntT.cs" />
+    <Compile Include="ArManagement\Pattern.cs" />
+    <Compile Include="ArManagement\Transformation.cs" />
+    <Compile Include="ArManagement\Tridiagonalize.cs" />
+    <Compile Include="Capture\Drivers\AForge\AForgeDriver.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\FileVideoSource.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\FilterInfo.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\FilterInfoCollection.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IAMCrossbar.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IAMStreamConfig.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IAMVideoControl.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IBaseFilter.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\ICaptureGraphBuilder2.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\ICreateDevEnum.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IEnumFilters.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IEnumPins.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IFileSourceFilter.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IFilterGraph.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IFilterGraph2.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IGraphBuilder.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IMediaControl.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IMediaEventEx.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IMediaFilter.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IPersist.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IPin.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IPropertyBag.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IReferenceClock.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\ISampleGrabber.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\ISampleGrabberCB.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\ISpecifyPropertyPages.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\IVideoWindow.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\Structures.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\Tools.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\Uuids.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Internals\Win32.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\PhysicalConnectorType.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\Uuids.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\VideoCapabilities.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\VideoCaptureDevice.cs" />
+    <Compile Include="Capture\Drivers\AForge\DirectShow\VideoCaptureDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Capture\Drivers\AForge\DirectShow\VideoCaptureDeviceForm.designer.cs">
+      <DependentUpon>VideoCaptureDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Capture\Drivers\AForge\DirectShow\VideoInput.cs" />
+    <Compile Include="Capture\Drivers\AForge\SystemTools.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\AsyncVideoSource.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\ByteArrayUtils.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\Exceptions.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\IVideoSource.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\JPEGStream.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\MJPEGStream.cs" />
+    <Compile Include="Capture\Drivers\AForge\Video\VideoEvents.cs" />
+    <Compile Include="Capture\Drivers\Arguments\DriverImageEventArgs.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DirectShowDriver.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\AsfFormat.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\AudioCapabilities.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\AudioSource.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\Capture.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\CrossbarSource.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\DeviceInUseException.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\DirectShowPropertyPage.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\DxUtils.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\Filter.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\FilterCollection.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\Filters.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\LabelAttribute.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\PropertyPage.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\PropertyPageCollection.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\Source.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\SourceCollection.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\Tuner.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\VfwCompressorPropertyPage.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\VideoCapabilities.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\Wmlib.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DSCapture\WmprofileData.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsBugWO.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsControl.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsCore.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsDevice.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsDVD.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsExtend.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsUtils.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsUuids.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsVmr9.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\DsVmRender.cs" />
+    <Compile Include="Capture\Drivers\DirectShow\DShowNET\QEdit.cs" />
+    <Compile Include="Capture\Drivers\DirectX\AM_MEDIA_TYPE.cs" />
+    <Compile Include="Capture\Drivers\DirectX\ASYNC_INPUT_FLAGS.cs" />
+    <Compile Include="Capture\Drivers\DirectX\CP_INTERFACE.cs" />
+    <Compile Include="Capture\Drivers\DirectX\DSVideoLibDriver.cs" />
+    <Compile Include="Capture\Drivers\DirectX\DS_MEDIA_FORMAT.cs" />
+    <Compile Include="Capture\Drivers\DirectX\DVRESOLUTION.cs" />
+    <Compile Include="Capture\Drivers\DirectX\GraphManager.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\AllocatorProperties.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\CameraControlFlags.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\CameraControlProperty.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\DsOptInt64.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\FilterCategory.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\FilterInfo2.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\FilterInfoCollection.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\Grabber.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IAMCameraControl.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IAMCrossbar.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IAMDroppedFrames.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IAMStreamConfig.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IAMVideoControl.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IAMVideoProcAmp.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IBaseFilter.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\ICaptureGraphBuilder2.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\ICreateDevEnum.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IEnumFilters.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IEnumMediaTypes.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IEnumPins.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IFileSourceFilter.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IFilterGraph.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IFilterGraph2.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IGraphBuilder.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IIPDVDec.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMediaControl.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMediaEventEx.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMediaFilter.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMediaSample.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMediaSeeking.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMemAllocator.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IMemInputPin.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IPersist.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IPin.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IPropertyBag.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IReferenceClock.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\ISampleGrabber.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\ISampleGrabberCB.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\ISpecifyPropertyPages.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\IVideoWindow.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\PhysicalConnectorType.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\SeekingCapabilities.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\SeekingFlags.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\Structures.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\Tools.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\Uuids.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\VideoCapabilities.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\VideoInput.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\VideoProcAmpProperty.cs" />
+    <Compile Include="Capture\Drivers\DirectX\Internals\Win32.cs" />
+    <Compile Include="Capture\Drivers\DirectX\MemoryBufferEntry.cs" />
+    <Compile Include="Capture\Drivers\DirectX\MemoryBufferHandle.cs" />
+    <Compile Include="Capture\Drivers\DirectX\PIXELFORMAT.cs" />
+    <Compile Include="Capture\Drivers\DirectX\VIDEO_INPUT_DEVICE.cs" />
+    <Compile Include="Capture\Drivers\DirectX\VIDEO_INPUT_FLAGS.cs" />
+    <Compile Include="Capture\Drivers\Echo\EchoDriver.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\BaseData.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\CircleData.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\DeformBase.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\IDataItem.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\PolygonData.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\QuadData.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\RotateBase.cs" />
+    <Compile Include="Capture\Drivers\Echo\Items\TranslationBase.cs" />
+    <Compile Include="Capture\Drivers\IDriver.cs" />
+    <Compile Include="Capture\Management\Exceptions\NotSupportedException.cs" />
+    <Compile Include="Capture\Drivers\IDriverAudio.cs" />
+    <Compile Include="Capture\Drivers\IDriverConfig.cs" />
+    <Compile Include="Capture\Drivers\IDriverFacade.cs" />
+    <Compile Include="Capture\Drivers\IDriverRecording.cs" />
+    <Compile Include="Capture\Drivers\IDriverVideo.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\BitmapInfo.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\BitmapInfoHeader.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\CapDriverCaps.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\CapStatus.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\CaptureParms.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\Device.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\Function.cs" />
+    <Compile Include="Capture\Drivers\Arguments\VideoStreamEventArgs.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\IWrapper.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\Layout.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\Point.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\VideoHdr.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\WaveFormatex.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\API\WinMessage.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\Wrapper.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\WebCamWinDriver.cs" />
+    <Compile Include="Capture\Management\CameraManager.cs" />
+    <Compile Include="Capture\Management\Arguments\FrameEventArgs.cs" />
+    <Compile Include="Capture\Management\ICamera.cs" />
+    <Compile Include="Capture\Management\ICameraAudio.cs" />
+    <Compile Include="Capture\Management\ICameraConfig.cs" />
+    <Compile Include="Capture\Management\ImageExtensions.cs" />
+    <Compile Include="Capture\Management\ICameraFacade.cs" />
+    <Compile Include="Capture\Management\ICameraRecording.cs" />
+    <Compile Include="Capture\Management\ICameraVideo.cs" />
+    <Compile Include="ImageProcessing\Base\BaseFileCompared.cs" />
+    <Compile Include="ImageProcessing\Base\Convolution2x2Command.cs" />
+    <Compile Include="ImageProcessing\Base\FloatPoint.cs" />
+    <Compile Include="ImageProcessing\Base\Mask2x2Command.cs" />
+    <Compile Include="ImageProcessing\Base\Mask5x5Command.cs" />
+    <Compile Include="ImageProcessing\Base\Mask9x9Command.cs" />
+    <Compile Include="ImageProcessing\Base\OffsetFilterCommand.cs" />
+    <Compile Include="ImageProcessing\Biometrics\FaceRecognitionCommand.cs" />
+    <Compile Include="ImageProcessing\Biometrics\IrisRecognitionCommand.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\CalibrationData.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Compute.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Coordinate2d.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Coordinate3d.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\CoordinateSystem\SCC.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\CoordinateSystem\SCI.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\CoordinateSystem\SCW.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\CoordinateSystem\SCP.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Draw.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Kalman.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\KalmanCamera.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\KalmanStruct.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Math\Compute.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Math\Gauss.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Math\Quadratic.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Math\Util.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\ObjectData.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\ObjectManager.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Parameters\CalibrationConstants.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Parameters\CalibrationData.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Parameters\ParameterExtrinsic.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Parameters\ParameterIntrinsic.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\Translation.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\TsaiCameraCalibration.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\VRML.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\VrmlObject.cs" />
+    <Compile Include="ImageProcessing\Contours\Blob.cs" />
+    <Compile Include="ImageProcessing\Contours\ContourCounterCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\ContourBase.cs" />
+    <Compile Include="ImageProcessing\Contours\ContourCounterBase.cs" />
+    <Compile Include="ImageProcessing\Contours\ContourComponent.cs" />
+    <Compile Include="ImageProcessing\Contours\Direction.cs" />
+    <Compile Include="ImageProcessing\Contours\GreedContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\IContoursDetector.cs" />
+    <Compile Include="ImageProcessing\Contours\KassContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\MooreNeighborContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\RadialSweepContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\SnakeContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\SquareContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Contours\TheoPavlidisContoursCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\BooleanEdgeCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\CannyCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\DifferenceCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\EdgeDetectQuickCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\EmbossLaplacianCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\EuclidianDistanceCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\HumanCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\IBorderDetector.cs" />
+    <Compile Include="ImageProcessing\Borders\LaplaceOfGaussianCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\MarrHildrethCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\MultiFlashCommand.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\TsaiCameraCalibrationCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\BeaudetCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\CornerBase.cs" />
+    <Compile Include="ImageProcessing\Corner\CssCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\DericheCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\ForstnerCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\HarrisCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\ICornerDetector.cs" />
+    <Compile Include="ImageProcessing\Corner\KitchenRosenfeldCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\MoravecCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\PlesseyCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\ShiTomasiCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\SusanCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\TrajkovicHedley4CornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\TrajkovicHedley8CornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\WangBradCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Corner\ZhengWangCornersCommand.cs" />
+    <Compile Include="ImageProcessing\Distance\CalcDistanceCommand.cs" />
+    <Compile Include="ImageProcessing\Distance\DistanceCalculator.cs" />
+    <Compile Include="ImageProcessing\Distance\IDistance.cs" />
+    <Compile Include="ImageProcessing\Effects\FourierTransformCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\GaussianCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\GaussianBlurCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\HomogenityCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\HorizontalCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\KirshCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\LaplaceCommand.cs" />
+    <Compile Include="ImageProcessing\Base\MaskGray3x3Command.cs" />
+    <Compile Include="ImageProcessing\Borders\MaskCommand.cs" />
+    <Compile Include="ImageProcessing\Base\Convolution3x3Command.cs" />
+    <Compile Include="ImageProcessing\Base\Mask3x3Command.cs" />
+    <Compile Include="ImageProcessing\Effects\MeanRemovalCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\PrewittCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\RichardsCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\RobinsonCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\MedianCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\SharpenCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\SmoothCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\SobelCommand.cs" />
+    <Compile Include="ImageProcessing\CommandCollection.cs" />
+    <Compile Include="ImageProcessing\Effects\DilatationCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\DistanceFunctionCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\ErosionCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\MoireCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\PixelateCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\RandomJitterCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\SphereCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\SwirlCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\TimeWarpCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\WaterCommand.cs" />
+    <Compile Include="ImageProcessing\Effects\ZhangSuenCommand.cs" />
+    <Compile Include="ImageProcessing\Images\AverageCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\BradleyLocalThresholdingCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\IAdaptativeBinarization.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\IterativeThresholdCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\OtsuThresholdCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\SISThresholdCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\BayerDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\BurkesDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ErrorDiffusionDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ErrorDiffusionToAdjacentNeighborsCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\FloydSteinbergDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\IBinarization.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\JarvisJudiceNinkeDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\OrderedDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\SierraDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\StuckiDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ThresholdCommand.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ThresholdWithCarryCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\BurkesColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\ColorErrorDiffusionToAdjacentNeighborsCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\ColorImageQuantizerCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\ErrorDiffusionColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\FloydSteinbergColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\IColorReduction.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\JarvisJudiceNinkeColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\MedianCutCubeCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\MedianCutQuantizerCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\OrderedColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\SierraColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\StuckiColorDitheringCommand.cs" />
+    <Compile Include="ImageProcessing\Images\HysteresisThresholdCommand.cs" />
+    <Compile Include="ImageProcessing\Operations\IOperation.cs" />
+    <Compile Include="ImageProcessing\Operators\IOperator.cs" />
+    <Compile Include="ImageProcessing\Segmentation\BerkeleyCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\EdgeAugmentedMeanShiftCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughCircle.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughCircleTransformation.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughCircleTransformationCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughLine.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughLineTransformation.cs" />
+    <Compile Include="ImageProcessing\ICommand.cs" />
+    <Compile Include="ImageProcessing\IImageInvoker.cs" />
+    <Compile Include="ImageProcessing\ImageInvoker.cs" />
+    <Compile Include="ImageProcessing\Images\BlackWhiteCommand.cs" />
+    <Compile Include="ImageProcessing\Images\BlueCommand.cs" />
+    <Compile Include="ImageProcessing\Images\ColorCommand.cs" />
+    <Compile Include="ImageProcessing\Images\CountPixelsCommand.cs" />
+    <Compile Include="ImageProcessing\Images\EqualizationCommand.cs" />
+    <Compile Include="ImageProcessing\Images\GrayscaleCommand.cs" />
+    <Compile Include="ImageProcessing\Images\GreenCommand.cs" />
+    <Compile Include="ImageProcessing\Images\InvertCommand.cs" />
+    <Compile Include="ImageProcessing\Images\LuminosityCommand.cs" />
+    <Compile Include="ImageProcessing\Images\NormalizeCommand.cs" />
+    <Compile Include="ImageProcessing\Images\RedCommand.cs" />
+    <Compile Include="ImageProcessing\Images\RotateCommand.cs" />
+    <Compile Include="ImageProcessing\Images\SepiaCommand.cs" />
+    <Compile Include="ImageProcessing\Motion\DetectMotionCommand.cs" />
+    <Compile Include="ImageProcessing\Motion\IMotion.cs" />
+    <Compile Include="ImageProcessing\Motion\MotionDetector.cs" />
+    <Compile Include="ImageProcessing\Motion\MotionPosition.cs" />
+    <Compile Include="ImageProcessing\Operations\BaseOperationCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\AndCommand.cs" />
+    <Compile Include="ImageProcessing\Operations\DivisionCommand.cs" />
+    <Compile Include="ImageProcessing\Operations\MultiplicationCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\BaseOperatorCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\NandCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\NorCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\NotCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\OrCommand.cs" />
+    <Compile Include="ImageProcessing\Operations\SubtractionCommand.cs" />
+    <Compile Include="ImageProcessing\Operations\SumCommand.cs" />
+    <Compile Include="ImageProcessing\Operators\XorCommand.cs" />
+    <Compile Include="ImageProcessing\Pixels\CountPixelCommand.cs" />
+    <Compile Include="ImageProcessing\Pixels\ICountPixels.cs" />
+    <Compile Include="ImageProcessing\Pixels\PixelCounter.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughLineTransformationCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HumanCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\LocalVariationCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\NomalizedCutCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\SourceSinkMinimumCutCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\SpectralMinCutCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\WatershedCommand.cs" />
+    <Compile Include="ImageProcessing\Segmentation\WatershedPixel.cs" />
+    <Compile Include="ImageProcessing\Size\ISizeCalculator.cs" />
+    <Compile Include="ImageProcessing\Size\SizeCalculator.cs" />
+    <Compile Include="ImageProcessing\Size\SizeCalculatorCommand.cs" />
+    <Compile Include="ImageProcessing\Textures\CloudsTextureCommand.cs" />
+    <Compile Include="ImageProcessing\Textures\ITextureGenerator.cs" />
+    <Compile Include="ImageProcessing\Textures\LabyrinthTextureCommand.cs" />
+    <Compile Include="ImageProcessing\Textures\MarbleTextureCommand.cs" />
+    <Compile Include="ImageProcessing\Textures\PerlinNoise.cs" />
+    <Compile Include="ImageProcessing\Textures\RandomTextureBase.cs" />
+    <Compile Include="ImageProcessing\Textures\TextileTextureCommand.cs" />
+    <Compile Include="ImageProcessing\Textures\TextureBase.cs" />
+    <Compile Include="ImageProcessing\Textures\WoodTextureCommand.cs" />
+    <Compile Include="ImageProcessing\Utils\Histogram.cs" />
+    <Compile Include="Model\IImage.cs" />
+    <Compile Include="Model\ImageBitmap.cs" />
+    <Compile Include="Model\ImageConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ImageProcessing\CameraCalibration\Chatterjee\" />
+    <Folder Include="ImageProcessing\CameraCalibration\CircularPoints\" />
+    <Folder Include="ImageProcessing\CameraCalibration\Constrained\" />
+    <Folder Include="ImageProcessing\CameraCalibration\Direct\" />
+    <Folder Include="ImageProcessing\CameraCalibration\Ganapathy\" />
+    <Folder Include="ImageProcessing\CameraCalibration\Grosky\" />
+    <Folder Include="ImageProcessing\CameraCalibration\Photogrammetry\" />
+    <Folder Include="ImageProcessing\CameraCalibration\Zhang\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Capture\Drivers\AForge\DirectShow\VideoCaptureDeviceForm.resx">
+      <DependentUpon>VideoCaptureDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

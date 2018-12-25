@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{089E88FF-F48B-4929-B3AF-65065E988011}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NAR.Tests</RootNamespace>
+    <AssemblyName>NAR.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.4.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ReferencedComponents\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArManagement\PatternTests.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\WebCamWinDriver.cs" />
+    <Compile Include="Capture\Drivers\WebCamWinAPI\Wrapper.cs" />
+    <Compile Include="ImageProcessing\BaseCommand.cs" />
+    <Compile Include="ImageProcessing\Borders\BooleanEdgeCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\CannyCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\EdgeDetectQuickCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\DifferenceCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\EuclidianDistanceCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\HomogenityCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\HorizontalCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\HumanCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\LaplaceOfGaussianCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\MarrHildrethCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\MaskCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\MultiFlashCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\RichardsCommandTests.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\TsaiCameraCalibrationCommandTests.cs" />
+    <Compile Include="ImageProcessing\CameraCalibration\Tsai\ComputeTests.cs" />
+    <Compile Include="ImageProcessing\Contours\ContourCounterCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\GreedContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\KassContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\MooreNeighborContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\RadialSweepContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\SnakeContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\SquareContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Contours\TheoPavlidisContoursCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\BeaudetCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\CssCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\DericheCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\ForstnerCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\HarrisCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\KitchenRosenfeldCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\MoravecCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\PlesseyCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\ShiTomasiCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\SusanCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\TrajkovicHedley4CornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\TrajkovicHedley8CornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\WangBradCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Corner\ZhengWangCornersCommandTests.cs" />
+    <Compile Include="ImageProcessing\Distance\CalcDistanceCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\DilatationCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\EmbossLaplacianCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\ErosionCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\GaussianBlurCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\KirshCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\LaplaceCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\GaussianCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\MeanRemovalCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\PrewittCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\RobinsonCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\MoireCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\PixelateCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\SharpenCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\SmoothCommandTests.cs" />
+    <Compile Include="ImageProcessing\Borders\SobelCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\SphereCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\SwirlCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\TimeWarpCommandTest.cs" />
+    <Compile Include="ImageProcessing\Effects\WaterCommandTests.cs" />
+    <Compile Include="ImageProcessing\Effects\ZhangSuenCommandTests.cs" />
+    <Compile Include="ImageProcessing\ImageInvokerTests.cs" />
+    <Compile Include="ImageProcessing\Images\AverageCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\BradleyLocalThresholdingCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\IterativeThresholdCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\OtsuThresholdCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\Adaptative\SISThresholdCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\BayerDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\BurkesDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ErrorDiffusionDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ErrorDiffusionToAdjacentNeighborsCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\FloydSteinbergDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\JarvisJudiceNinkeDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\OrderedDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\SierraDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\StuckiDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ThresholdCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\Binarization\ThresholdWithCarryCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\BlackWhiteCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\BlueCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\BurkesColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\ColorErrorDiffusionToAdjacentNeighborsCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\ColorImageQuantizerCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\ErrorDiffusionColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\FloydSteinbergColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\JarvisJudiceNinkeColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\MedianCutCubeCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\MedianCutQuantizerCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\OrderedColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\SierraColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\ColorReduction\StuckiColorDitheringCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\GrayscaleCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\GreenCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\InvertCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\LuminosityCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\NormalizeCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\RedCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\RotateCommandTests.cs" />
+    <Compile Include="ImageProcessing\Images\SepiaCommandTests.cs" />
+    <Compile Include="ImageProcessing\Motion\DetectMotionCommandTests.cs" />
+    <Compile Include="ImageProcessing\Motion\MotionDetectorTests.cs" />
+    <Compile Include="ImageProcessing\Operations\DivisionCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operations\MultiplicationCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operations\SubtractionCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operations\SumCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operators\AndCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operators\NandCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operators\NorCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operators\NotCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operators\OrCommandTests.cs" />
+    <Compile Include="ImageProcessing\Operators\XorCommandTests.cs" />
+    <Compile Include="ImageProcessing\Pixels\CountPixelCommandTests.cs" />
+    <Compile Include="ImageProcessing\Pixels\PixelCounterTests.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughCircleTransformationCommandTests.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughCircleTransformationTests.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughLineTransformationCommandTests.cs" />
+    <Compile Include="ImageProcessing\Segmentation\HoughLineTransformationTests.cs" />
+    <Compile Include="ImageProcessing\Size\SizeCalculatorCommandTests.cs" />
+    <Compile Include="ImageProcessing\Size\SizeCalculatorTests.cs" />
+    <Compile Include="ImageProcessing\Textures\CloudsTextureCommandTests.cs" />
+    <Compile Include="ImageProcessing\Textures\LabyrinthTextureCommandTests.cs" />
+    <Compile Include="ImageProcessing\Textures\MarbleTextureCommandTests.cs" />
+    <Compile Include="ImageProcessing\Textures\TextileTextureCommandTests.cs" />
+    <Compile Include="ImageProcessing\Textures\WoodTextureCommandTests.cs" />
+    <Compile Include="ImageProcessing\Util\HistogramTests.cs" />
+    <Compile Include="Model\ImageBitmapTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Commands\BooleanEdgeCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BooleanEdgeCommandByLimiar.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\AverageCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\AverageCommandGrayscale.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BayerDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BradleyLocalThresholdingCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BurkesDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\ThresholdCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\FloydSteinbergDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\JarvisJudiceNinkeDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\OrderedDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\HoughLineTransformationCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\LaplaceOfGaussianCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\LaplaceOfGaussianGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SierraDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SquareContoursCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\MooreNeighborBlobCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\StuckiDitheringCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\WoodTextureCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\TextileTextureCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\MarbleTextureCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\LabyrinthTextureCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\CloudsTextureCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\GrayscaleCommandLuminance.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\GaussianCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\HarrisCornersCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\MoravecCornersCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SusanCornersCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Contours.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HarrisSerial.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HarrisParallel.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BlackWhiteCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BlackWhiteCommandWithLimiar.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\BlueCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\AndCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\CannyCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\CannyGrayscaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\EdgeDetectQuickGrayscaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\HoughResult.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\Invoker.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\CountPixelCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\KirshGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\LaplaceGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\NotCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\NORCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\NANDCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\NormalizeCommandRGB.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\PrewittGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\RichardsGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\RobinsonGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SepiaCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SobelGrayScaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\ZhangSuenCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\ErosionCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SizeCalculatorCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HoughSample.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ImagePen.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\CalcDistanceCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\DetectMotionCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\RichardsCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\HorizontalCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\HomogenityCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\DifferenceCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\DilatationCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\PixelateCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\WaterCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\MoireCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\TimeWarpCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SwirlCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SphereCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\NormalizeCommandGrayscale.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\LaplaceCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\KirshCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\PrewittCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SobelCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\EdgeDetectQuickCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\EmbossLaplacianCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SharpenCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\MeanRemovalCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\GaussianBlurCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SmoothCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\RotateCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\RobinsonCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\DivisionCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\InvertCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\LuminosityCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\MultiplicationCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\OrCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SubtractionCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\SumCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\GreenCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\RedCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\GrayscaleCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\XorCommand.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\HoughSampleLine.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Commands\HoughResultCircle.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sample2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sample.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sample.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SampleMotion.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NAR\NAR.csproj">
+      <Project>{4014E958-01B5-43CF-A03C-BACB17E190B0}</Project>
+      <Name>NAR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data\patt.hiro">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

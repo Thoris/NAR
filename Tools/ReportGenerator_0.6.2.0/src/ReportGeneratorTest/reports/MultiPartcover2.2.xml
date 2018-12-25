@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <PartCoverReport ver="2.2.0.34630" exitCode="0">
+    <file id="2" url="C:\Program.cs" />
+    <file id="1" url="C:\TestClass.cs" />
+    <file id="3" url="C:\TestClass2.cs" />
+    <type asm="Test" name="Test.TestClass" flags="1048576">
+      <method name="&lt;SampleFunction&gt;b__0" sig="bool  (string)" flags="145" iflags="0">
+        <code>
+          <pt visit="4" pos="17" len="2" />
+          <pt visit="4" pos="0" len="17" fid="1" sl="22" sc="40" el="22" ec="57" />
+        </code>
+      </method>
+      <method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <code>
+          <pt visit="2" pos="6" len="1" />
+          <pt visit="2" pos="0" len="6" />
+        </code>
+      </method>
+      <method name="SampleFunction" sig="void  ()" flags="134" iflags="0">
+        <code>
+          <pt visit="2" pos="152" len="1" fid="1" sl="24" sc="9" el="24" ec="10" />
+          <pt visit="2" pos="145" len="7" fid="1" sl="23" sc="13" el="23" ec="37" />
+          <pt visit="2" pos="107" len="38" fid="1" sl="22" sc="13" el="22" ec="59" />
+          <pt visit="2" pos="78" len="29" fid="1" sl="21" sc="13" el="21" ec="48" />
+          <pt visit="0" pos="77" len="1" fid="1" sl="19" sc="13" el="19" ec="14" />
+          <pt visit="0" pos="55" len="22" fid="1" sl="18" sc="17" el="18" ec="65" />
+          <pt visit="0" pos="54" len="1" fid="1" sl="17" sc="13" el="17" ec="14" />
+          <pt visit="2" pos="52" len="2" />
+          <pt visit="2" pos="51" len="1" fid="1" sl="15" sc="13" el="15" ec="14" />
+          <pt visit="2" pos="29" len="22" fid="1" sl="14" sc="17" el="14" ec="61" />
+          <pt visit="2" pos="28" len="1" fid="1" sl="13" sc="13" el="13" ec="14" />
+          <pt visit="2" pos="24" len="4" />
+          <pt visit="2" pos="15" len="9" fid="1" sl="12" sc="13" el="12" ec="23" />
+          <pt visit="2" pos="12" len="3" fid="1" sl="11" sc="13" el="11" ec="24" />
+          <pt visit="2" pos="1" len="11" fid="1" sl="10" sc="13" el="10" ec="46" />
+          <pt visit="2" pos="0" len="1" fid="1" sl="9" sc="9" el="9" ec="10" />
+        </code>
+      </method>
+    </type>
+    <type asm="Test" name="Test.Program" flags="1048576">
+      <method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <code>
+          <pt visit="0" pos="6" len="1" />
+          <pt visit="0" pos="0" len="6" />
+        </code>
+      </method>
+      <method name="Main" sig="void  (string[])" flags="145" iflags="0">
+        <code>
+          <pt visit="0" pos="12" len="1" fid="2" sl="13" sc="9" el="13" ec="10" />
+          <pt visit="0" pos="1" len="11" fid="2" sl="12" sc="13" el="12" ec="46" />
+          <pt visit="0" pos="0" len="1" fid="2" sl="11" sc="9" el="11" ec="10" />
+        </code>
+      </method>
+    </type>
+    <type asm="Test" name="Test.TestClass2" flags="1048576">
+      <method name="doit4" sig="void  ()" flags="134" iflags="0">
+        <code>
+          <pt visit="1" pos="12" len="1" fid="3" sl="23" sc="9" el="23" ec="10" />
+          <pt visit="1" pos="1" len="11" fid="3" sl="22" sc="13" el="22" ec="36" />
+          <pt visit="1" pos="0" len="1" fid="3" sl="21" sc="9" el="21" ec="10" />
+        </code>
+      </method>
+      <method name="doit3" sig="void  ()" flags="134" iflags="0">
+        <code>
+          <pt visit="1" pos="12" len="1" fid="3" sl="18" sc="9" el="18" ec="10" />
+          <pt visit="1" pos="1" len="11" fid="3" sl="17" sc="13" el="17" ec="36" />
+          <pt visit="1" pos="0" len="1" fid="3" sl="16" sc="9" el="16" ec="10" />
+        </code>
+      </method>
+      <method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <code>
+          <pt visit="2" pos="19" len="2" fid="3" sl="13" sc="9" el="13" ec="10" />
+          <pt visit="2" pos="8" len="11" fid="3" sl="12" sc="13" el="12" ec="46" />
+          <pt visit="2" pos="7" len="1" fid="3" sl="11" sc="9" el="11" ec="10" />
+          <pt visit="2" pos="0" len="7" fid="3" sl="10" sc="9" el="10" ec="28" />
+        </code>
+      </method>
+    </type>
+    <run>
+      <tracker>
+        <message tm="633755542761001208">Start target</message>
+        <message tm="633755542761021210">open driver pipe</message>
+        <message tm="633755542761031211">modify target environment variables</message>
+        <message tm="633755542761031211">create target process</message>
+        <message tm="633755542761051213">wait for driver connection</message>
+        <message tm="633755542765811689">driver connected successfully</message>
+        <message tm="633755542765821690">send rules to the driver</message>
+        <message tm="633755542765821690">wait for rules confirm</message>
+        <message tm="633755542765821690">Wait results</message>
+        <message tm="633755542781823290">instrument data is being received</message>
+        <message tm="633755542781823290">InstrumentDataReceiveCountersBegin</message>
+        <message tm="633755542781823290">assembly count: 2</message>
+        <message tm="633755542781833291">load assembly Test (3 types)</message>
+        <message tm="633755542781853293">load assembly Test (3 types)</message>
+        <message tm="633755542781873295">InstrumentDataReceiveCountersEnd</message>
+        <message tm="633755542781873295">file list is being received</message>
+        <message tm="633755542781873295">3 files to load</message>
+        <message tm="633755542781873295">file list load is complete</message>
+        <message tm="633755542781873295">instrument data load complete</message>
+        <message tm="633755542781873295">functions loading is being started</message>
+        <message tm="633755542781873295">functions count 0</message>
+        <message tm="633755542781883296">functions loading is complete</message>
+        <message tm="633755542781883296">request target shutdown</message>
+        <message tm="633755542783413449">Walk results</message>
+      </tracker>
+      <log />
+    </run>
+  </PartCoverReport>
+  <PartCoverReport ver="2.2.0.34630" exitCode="0">
+    <file id="2" url="C:\Program.cs" />
+    <file id="1" url="C:\TestClass.cs" />
+    <file id="3" url="C:\TestClass2.cs" />
+    <type asm="Test" name="Test.TestClass" flags="1048576">
+      <method name="&lt;SampleFunction&gt;b__0" sig="bool  (string)" flags="145" iflags="0">
+        <code>
+          <pt visit="4" pos="17" len="2" />
+          <pt visit="4" pos="0" len="17" fid="1" sl="22" sc="40" el="22" ec="57" />
+        </code>
+      </method>
+      <method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <code>
+          <pt visit="2" pos="6" len="1" />
+          <pt visit="2" pos="0" len="6" />
+        </code>
+      </method>
+      <method name="SampleFunction" sig="void  ()" flags="134" iflags="0">
+        <code>
+          <pt visit="2" pos="152" len="1" fid="1" sl="24" sc="9" el="24" ec="10" />
+          <pt visit="2" pos="145" len="7" fid="1" sl="23" sc="13" el="23" ec="37" />
+          <pt visit="2" pos="107" len="38" fid="1" sl="22" sc="13" el="22" ec="59" />
+          <pt visit="2" pos="78" len="29" fid="1" sl="21" sc="13" el="21" ec="48" />
+          <pt visit="0" pos="77" len="1" fid="1" sl="19" sc="13" el="19" ec="14" />
+          <pt visit="0" pos="55" len="22" fid="1" sl="18" sc="17" el="18" ec="65" />
+          <pt visit="0" pos="54" len="1" fid="1" sl="17" sc="13" el="17" ec="14" />
+          <pt visit="2" pos="52" len="2" />
+          <pt visit="2" pos="51" len="1" fid="1" sl="15" sc="13" el="15" ec="14" />
+          <pt visit="2" pos="29" len="22" fid="1" sl="14" sc="17" el="14" ec="61" />
+          <pt visit="2" pos="28" len="1" fid="1" sl="13" sc="13" el="13" ec="14" />
+          <pt visit="2" pos="24" len="4" />
+          <pt visit="2" pos="15" len="9" fid="1" sl="12" sc="13" el="12" ec="23" />
+          <pt visit="2" pos="12" len="3" fid="1" sl="11" sc="13" el="11" ec="24" />
+          <pt visit="2" pos="1" len="11" fid="1" sl="10" sc="13" el="10" ec="46" />
+          <pt visit="2" pos="0" len="1" fid="1" sl="9" sc="9" el="9" ec="10" />
+        </code>
+      </method>
+    </type>
+    <type asm="Test" name="Test.Program" flags="1048576">
+      <method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <code>
+          <pt visit="0" pos="6" len="1" />
+          <pt visit="0" pos="0" len="6" />
+        </code>
+      </method>
+      <method name="Main" sig="void  (string[])" flags="145" iflags="0">
+        <code>
+          <pt visit="0" pos="12" len="1" fid="2" sl="13" sc="9" el="13" ec="10" />
+          <pt visit="0" pos="1" len="11" fid="2" sl="12" sc="13" el="12" ec="46" />
+          <pt visit="0" pos="0" len="1" fid="2" sl="11" sc="9" el="11" ec="10" />
+        </code>
+      </method>
+    </type>
+    <type asm="Test" name="Test.TestClass2" flags="1048576">
+      <method name="doit4" sig="void  ()" flags="134" iflags="0">
+        <code>
+          <pt visit="1" pos="12" len="1" fid="3" sl="23" sc="9" el="23" ec="10" />
+          <pt visit="1" pos="1" len="11" fid="3" sl="22" sc="13" el="22" ec="36" />
+          <pt visit="1" pos="0" len="1" fid="3" sl="21" sc="9" el="21" ec="10" />
+        </code>
+      </method>
+      <method name="doit3" sig="void  ()" flags="134" iflags="0">
+        <code>
+          <pt visit="1" pos="12" len="1" fid="3" sl="18" sc="9" el="18" ec="10" />
+          <pt visit="1" pos="1" len="11" fid="3" sl="17" sc="13" el="17" ec="36" />
+          <pt visit="1" pos="0" len="1" fid="3" sl="16" sc="9" el="16" ec="10" />
+        </code>
+      </method>
+      <method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <code>
+          <pt visit="2" pos="19" len="2" fid="3" sl="13" sc="9" el="13" ec="10" />
+          <pt visit="2" pos="8" len="11" fid="3" sl="12" sc="13" el="12" ec="46" />
+          <pt visit="2" pos="7" len="1" fid="3" sl="11" sc="9" el="11" ec="10" />
+          <pt visit="2" pos="0" len="7" fid="3" sl="10" sc="9" el="10" ec="28" />
+        </code>
+      </method>
+    </type>
+    <run>
+      <tracker>
+        <message tm="633755542761001208">Start target</message>
+        <message tm="633755542761021210">open driver pipe</message>
+        <message tm="633755542761031211">modify target environment variables</message>
+        <message tm="633755542761031211">create target process</message>
+        <message tm="633755542761051213">wait for driver connection</message>
+        <message tm="633755542765811689">driver connected successfully</message>
+        <message tm="633755542765821690">send rules to the driver</message>
+        <message tm="633755542765821690">wait for rules confirm</message>
+        <message tm="633755542765821690">Wait results</message>
+        <message tm="633755542781823290">instrument data is being received</message>
+        <message tm="633755542781823290">InstrumentDataReceiveCountersBegin</message>
+        <message tm="633755542781823290">assembly count: 2</message>
+        <message tm="633755542781833291">load assembly Test (3 types)</message>
+        <message tm="633755542781853293">load assembly Test (3 types)</message>
+        <message tm="633755542781873295">InstrumentDataReceiveCountersEnd</message>
+        <message tm="633755542781873295">file list is being received</message>
+        <message tm="633755542781873295">3 files to load</message>
+        <message tm="633755542781873295">file list load is complete</message>
+        <message tm="633755542781873295">instrument data load complete</message>
+        <message tm="633755542781873295">functions loading is being started</message>
+        <message tm="633755542781873295">functions count 0</message>
+        <message tm="633755542781883296">functions loading is complete</message>
+        <message tm="633755542781883296">request target shutdown</message>
+        <message tm="633755542783413449">Walk results</message>
+      </tracker>
+      <log />
+    </run>
+  </PartCoverReport>
+</root>

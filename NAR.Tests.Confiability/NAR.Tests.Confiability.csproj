@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NAR.Tests.Confiability</RootNamespace>
+    <AssemblyName>NAR.Tests.Confiability</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseTest.cs" />
+    <Compile Include="Base\BlackWhiteBaseTest.cs" />
+    <Compile Include="Base\BlackWhiteBorderBaseTest.cs" />
+    <Compile Include="Base\BorderBaseTest.cs" />
+    <Compile Include="Base\Color2ImagesBaseTest.cs" />
+    <Compile Include="Base\ColorBaseTest.cs" />
+    <Compile Include="Base\GrayscaleBaseTest.cs" />
+    <Compile Include="Base\ReportBase.cs" />
+    <Compile Include="Base\ListBaseTest.cs" />
+    <Compile Include="Commands\Borders\BaseBorderReport.cs" />
+    <Compile Include="Commands\Borders\BooleanEdgeCommandReport.cs" />
+    <Compile Include="Commands\Borders\CannyCommandReport.cs" />
+    <Compile Include="Commands\Borders\DifferenceCommandReport.cs" />
+    <Compile Include="Commands\Borders\EdgeDetectQuickCommandReport.cs" />
+    <Compile Include="Commands\Borders\EmbossLaplacianCommandReport.cs" />
+    <Compile Include="Commands\Borders\EuclidianDistanceCommandReport.cs" />
+    <Compile Include="Commands\Borders\HomogenityCommandReport.cs" />
+    <Compile Include="Commands\Borders\HorizontalCommandReport.cs" />
+    <Compile Include="Commands\Borders\HumanCommandReport.cs" />
+    <Compile Include="Commands\Borders\KirshCommandReport.cs" />
+    <Compile Include="Commands\Borders\LaplaceCommandReport.cs" />
+    <Compile Include="Commands\Borders\LaplaceOfGaussianCommandReport.cs" />
+    <Compile Include="Commands\Borders\MarrHildrethCommandReport.cs" />
+    <Compile Include="Commands\Borders\MultiFlashCommandReport.cs" />
+    <Compile Include="Commands\Borders\PrewittCommandReport.cs" />
+    <Compile Include="Commands\Borders\RichardsCommandReport.cs" />
+    <Compile Include="Commands\Borders\RobinsonCommandReport.cs" />
+    <Compile Include="Commands\Borders\SobelCommandReport.cs" />
+    <Compile Include="Commands\Contours\GreedContoursCommandReport.cs" />
+    <Compile Include="Commands\Contours\KassContoursCommandReport.cs" />
+    <Compile Include="Commands\Contours\MooreNeighborContoursCommandReport.cs" />
+    <Compile Include="Commands\Contours\RadialSweepContoursCommandReport.cs" />
+    <Compile Include="Commands\Contours\SnakeContoursCommandReport.cs" />
+    <Compile Include="Commands\Contours\SquareContoursCommandReport.cs" />
+    <Compile Include="Commands\Contours\TheoPavlidisContoursCommandReport.cs" />
+    <Compile Include="Commands\Corner\BeaudetCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\CssCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\DericheCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\ForstnerCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\HarrisCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\KitchenRosenfeldCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\MoravecCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\PlesseyCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\ShiTomasiCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\SusanCornersCommand.cs" />
+    <Compile Include="Commands\Corner\TrajkovicHedley4CornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\TrajkovicHedley8CornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\WangBradCornersCommandReport.cs" />
+    <Compile Include="Commands\Corner\ZhengWangCornersCommandReport.cs" />
+    <Compile Include="Commands\Distance\CalcDistanceCommandReport.cs" />
+    <Compile Include="Commands\EchoCommand.cs" />
+    <Compile Include="Commands\EchoCommandReport.cs" />
+    <Compile Include="Commands\Effects\DilatationCommandReport.cs" />
+    <Compile Include="Commands\Effects\DistanceFunctionCommandReport.cs" />
+    <Compile Include="Commands\Effects\ErosionCommandReport.cs" />
+    <Compile Include="Commands\Effects\FourierTransformCommandReport.cs" />
+    <Compile Include="Commands\Effects\GaussianBlurCommandReport.cs" />
+    <Compile Include="Commands\Effects\GaussianCommandReport.cs" />
+    <Compile Include="Commands\Effects\MeanRemovalCommandReport.cs" />
+    <Compile Include="Commands\Effects\MedianCommandReport.cs" />
+    <Compile Include="Commands\Effects\MoireCommandReport.cs" />
+    <Compile Include="Commands\Effects\PixelateCommandReport.cs" />
+    <Compile Include="Commands\Effects\RandomJitterCommandReport.cs" />
+    <Compile Include="Commands\Effects\SharpenCommandReport.cs" />
+    <Compile Include="Commands\Effects\SmoothCommandReport.cs" />
+    <Compile Include="Commands\Effects\SphereCommandReport.cs" />
+    <Compile Include="Commands\Effects\SwirlCommandReport.cs" />
+    <Compile Include="Commands\Effects\TimeWarpCommandReport.cs" />
+    <Compile Include="Commands\Effects\WaterCommandReport.cs" />
+    <Compile Include="Commands\Effects\ZhangSuenCommandReport.cs" />
+    <Compile Include="Commands\Images\AverageCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\Adaptative\BradleyLocalThresholdingCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\BayerDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\BurkesDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\FloydSteinbergDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\JarvisJudiceNinkeDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\OrderedDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\SierraDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\StuckiDitheringCommandReport.cs" />
+    <Compile Include="Commands\Images\Binarization\ThresholdCommandReport.cs" />
+    <Compile Include="Commands\Images\BlackWhiteCommandReport.cs" />
+    <Compile Include="Commands\Images\BlueCommandReport.cs" />
+    <Compile Include="Commands\Images\BlackWhiteLimiarCommandReport.cs" />
+    <Compile Include="Commands\Images\NormalizeGrayscaleCommandReport.cs" />
+    <Compile Include="Commands\Images\GrayscaleLuminanceCommandReport.cs" />
+    <Compile Include="Commands\Images\GrayscaleCommandReport.cs" />
+    <Compile Include="Commands\Images\GreenCommandReport.cs" />
+    <Compile Include="Commands\Images\InvertCommandReport.cs" />
+    <Compile Include="Commands\Images\LuminosityCommandReport.cs" />
+    <Compile Include="Commands\Images\NormalizeCommandReport.cs" />
+    <Compile Include="Commands\Images\RedCommandReport.cs" />
+    <Compile Include="Commands\Images\RotateCommandReport.cs" />
+    <Compile Include="Commands\Images\SepiaCommandReport.cs" />
+    <Compile Include="Commands\Model\ImageBitmapBytesReport.cs" />
+    <Compile Include="Commands\Model\ImageBitmapImageReport.cs" />
+    <Compile Include="Commands\Operations\DivisionCommandReport.cs" />
+    <Compile Include="Commands\Operations\MultiplicationCommandReport.cs" />
+    <Compile Include="Commands\Operations\SubtractionCommandReport.cs" />
+    <Compile Include="Commands\Operations\SumCommandReport.cs" />
+    <Compile Include="Commands\Operators\AndCommandReport.cs" />
+    <Compile Include="Commands\Operators\NandCommandReport.cs" />
+    <Compile Include="Commands\Operators\NorCommandReport.cs" />
+    <Compile Include="Commands\Operators\NotCommandReport.cs" />
+    <Compile Include="Commands\Operators\OrCommandReport.cs" />
+    <Compile Include="Commands\Operators\XorCommandReport.cs" />
+    <Compile Include="Commands\Pixels\CountPixelCommandReport.cs" />
+    <Compile Include="Commands\Segmentation\HoughCircleTransformationCommandReport.cs" />
+    <Compile Include="Commands\Segmentation\HoughLineTransformationCommandReport.cs" />
+    <Compile Include="Commands\Size\SizeCalculatorCommandReport.cs" />
+    <Compile Include="Commands\Textures\CloudsTextureCommandReport.cs" />
+    <Compile Include="Commands\Textures\LabyrinthTextureCommandReport.cs" />
+    <Compile Include="Commands\Textures\MarbleTextureCommandReport.cs" />
+    <Compile Include="Commands\Textures\TextileTextureCommandReport.cs" />
+    <Compile Include="Commands\Textures\WoodTextureCommandReport.cs" />
+    <Compile Include="FileResultData.cs" />
+    <Compile Include="Hardware\Information.cs" />
+    <Compile Include="Hardware\OperatingSystem.cs" />
+    <Compile Include="Hardware\PhysicalMemory.cs" />
+    <Compile Include="Hardware\Processor.cs" />
+    <Compile Include="IReport.cs" />
+    <Compile Include="Performer.cs" />
+    <Compile Include="Reports\FileReportBase.cs" />
+    <Compile Include="Reports\HtmlReport.cs" />
+    <Compile Include="Reports\TextReport.cs" />
+    <Compile Include="ResultData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeLoader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NAR\NAR.csproj">
+      <Project>{4014E958-01B5-43CF-A03C-BACB17E190B0}</Project>
+      <Name>NAR</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\List\Chess.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\List\Coin.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\List\Sample.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\List\SteveJobs.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\List\TurtleNinja.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sample.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sample2.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HtmlReportTemplate.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\HtmlIndex.htm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

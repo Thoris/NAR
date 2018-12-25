@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="coverage.xsl" type="text/xsl"?>
+<!-- saved from url=(0022)http://www.ncover.org/ -->
+<root>
+  <coverage profilerVersion="1.5.8 Beta" driverVersion="1.5.8.0" startTime="2009-04-18T15:39:45.12717+02:00" measureTime="2009-04-18T15:39:46.32017+02:00">
+    <module moduleId="27" name="C:\Test.exe" assembly="Test" assemblyIdentity="Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
+      <method name="Main" excluded="false" instrumented="false" class="Test.Program">
+        <seqpnt visitcount="0" line="11" column="3" endline="11" endcolumn="4" excluded="false" document="C:\Program.cs" />
+        <seqpnt visitcount="0" line="12" column="3" endline="12" endcolumn="4" excluded="false" document="C:\Program.cs" />
+      </method>
+      <method name="SampleFunction" excluded="false" instrumented="true" class="Test.TestClass">
+        <seqpnt visitcount="1" line="12" column="4" endline="12" endcolumn="37" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="14" column="4" endline="14" endcolumn="15" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="16" column="4" endline="16" endcolumn="15" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="0" line="18" column="5" endline="18" endcolumn="33" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="22" column="5" endline="22" endcolumn="34" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="24" column="3" endline="24" endcolumn="4" excluded="false" document="C:\TestClass.cs" />
+      </method>
+      <method name="SampleFunction" excluded="false" instrumented="true" class="Test.TestClass2">
+        <seqpnt visitcount="1" line="12" column="4" endline="12" endcolumn="44" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="14" column="4" endline="14" endcolumn="44" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="16" column="25" endline="16" endcolumn="32" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="4" line="16" column="13" endline="16" endcolumn="21" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="4" line="18" column="5" endline="18" endcolumn="29" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="5" line="16" column="22" endline="16" endcolumn="24" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="21" column="4" endline="21" endcolumn="67" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="23" column="4" endline="23" endcolumn="96" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="25" column="5" endline="25" endcolumn="40" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="27" column="3" endline="27" endcolumn="4" excluded="false" document="C:\TestClass2.cs" />
+      </method>
+      <method name="&lt;SampleFunction&gt;b__0" excluded="false" instrumented="true" class="Test.TestClass2">
+        <seqpnt visitcount="4" line="14" column="37" endline="14" endcolumn="42" excluded="false" document="C:\TestClass2.cs" />
+      </method>
+      <method name="&lt;SampleFunction&gt;b__1" excluded="false" instrumented="true" class="Test.TestClass2+&lt;&gt;c__DisplayClass3">
+        <seqpnt visitcount="3" line="23" column="36" endline="23" endcolumn="86" excluded="false" document="C:\TestClass2.cs" />
+      </method>
+    </module>
+  </coverage>
+  <coverage profilerVersion="1.5.8 Beta" driverVersion="1.5.8.0" startTime="2009-04-18T15:39:45.12717+02:00" measureTime="2009-04-18T15:39:46.32017+02:00">
+    <module moduleId="27" name="C:\Test.exe" assembly="Test" assemblyIdentity="Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null, processorArchitecture=MSIL">
+      <method name="Main" excluded="false" instrumented="false" class="Test.Program">
+        <seqpnt visitcount="0" line="11" column="3" endline="11" endcolumn="4" excluded="false" document="C:\Program.cs" />
+        <seqpnt visitcount="0" line="12" column="3" endline="12" endcolumn="4" excluded="false" document="C:\Program.cs" />
+      </method>
+      <method name="SampleFunction" excluded="false" instrumented="true" class="Test.TestClass">
+        <seqpnt visitcount="1" line="12" column="4" endline="12" endcolumn="37" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="14" column="4" endline="14" endcolumn="15" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="16" column="4" endline="16" endcolumn="15" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="0" line="18" column="5" endline="18" endcolumn="33" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="22" column="5" endline="22" endcolumn="34" excluded="false" document="C:\TestClass.cs" />
+        <seqpnt visitcount="1" line="24" column="3" endline="24" endcolumn="4" excluded="false" document="C:\TestClass.cs" />
+      </method>
+      <method name="SampleFunction" excluded="false" instrumented="true" class="Test.TestClass2">
+        <seqpnt visitcount="1" line="12" column="4" endline="12" endcolumn="44" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="14" column="4" endline="14" endcolumn="44" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="16" column="25" endline="16" endcolumn="32" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="4" line="16" column="13" endline="16" endcolumn="21" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="4" line="18" column="5" endline="18" endcolumn="29" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="5" line="16" column="22" endline="16" endcolumn="24" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="21" column="4" endline="21" endcolumn="67" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="23" column="4" endline="23" endcolumn="96" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="25" column="5" endline="25" endcolumn="40" excluded="false" document="C:\TestClass2.cs" />
+        <seqpnt visitcount="1" line="27" column="3" endline="27" endcolumn="4" excluded="false" document="C:\TestClass2.cs" />
+      </method>
+      <method name="&lt;SampleFunction&gt;b__0" excluded="false" instrumented="true" class="Test.TestClass2">
+        <seqpnt visitcount="4" line="14" column="37" endline="14" endcolumn="42" excluded="false" document="C:\TestClass2.cs" />
+      </method>
+      <method name="&lt;SampleFunction&gt;b__1" excluded="false" instrumented="true" class="Test.TestClass2+&lt;&gt;c__DisplayClass3">
+        <seqpnt visitcount="3" line="23" column="36" endline="23" endcolumn="86" excluded="false" document="C:\TestClass2.cs" />
+      </method>
+    </module>
+  </coverage>
+</root>

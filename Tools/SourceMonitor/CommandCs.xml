@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<sourcemonitor_commands>
+  <write_log>false</write_log>
+  <command>
+    <project_file>TempProject.smproj</project_file>
+    <project_language>CSharp</project_language>
+    <source_directory>..\</source_directory>
+    <include_subdirectories>true</include_subdirectories>
+    <parse_utf8_files>True</parse_utf8_files>
+    <file_extensions>*.cs|*.designer.cs,AssemblyInfo.cs,*Tools</file_extensions>    
+    <export>
+      <export_file>..\build\SourceMonitor\SourceMonitorDetailedOutput.xml</export_file>
+      <export_type>2</export_type>
+    </export>
+  </command>
+</sourcemonitor_commands>

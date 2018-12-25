@@ -1,0 +1,2 @@
+partcover.exe --target "..\\NUnit\nunit-console.exe" --target-work-dir "..\\NUnit" --target-args "..\\..\\NAR.Tests\bin\Release\NAR.Tests.dll" --include "[NAR]*" --output "..\\..\\..\\build\CoverageResult-NAR_application.xml" --log 1000
+pause

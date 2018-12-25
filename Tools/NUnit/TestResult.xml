@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="D:\Thoris\Projetos\NAR\build\source\NAR.Tests\bin\Release\NAR.Tests.dll" total="133" errors="0" failures="1" not-run="22" inconclusive="0" ignored="22" skipped="0" invalid="0" date="2014-01-21" time="12:56:08">
+  <environment nunit-version="2.6.0.12051" clr-version="2.0.50727.5472" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="D:\Thoris\Projetos\NAR\trunk\Tools\NUnit" machine-name="THORIS-PC" user="THORIS" user-domain="THORIS-PC" />
+  <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
+  <test-suite type="Assembly" name="D:\Thoris\Projetos\NAR\build\source\NAR.Tests\bin\Release\NAR.Tests.dll" executed="True" result="Failure" success="False" time="27.219" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="NAR" executed="True" result="Failure" success="False" time="27.183" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="Tests" executed="True" result="Failure" success="False" time="27.182" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="ArManagement" executed="True" result="Success" success="True" time="0.378" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="PatternTests" executed="True" result="Success" success="True" time="0.376" asserts="0">
+                    <results>
+                      <test-case name="NAR.Tests.ArManagement.PatternTests.TestLoadFile" executed="True" result="Success" success="True" time="0.349" asserts="0" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Capture" executed="True" result="Success" success="True" time="12.658" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Drivers" executed="True" result="Success" success="True" time="12.658" asserts="0">
+                    <results>
+                      <test-suite type="Namespace" name="WebCamWinAPI" executed="True" result="Success" success="True" time="12.658" asserts="0">
+                        <results>
+                          <test-suite type="TestFixture" name="WebCamWinDriver" executed="True" result="Success" success="True" time="12.648" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.Capture.Drivers.WebCamWinAPI.WebCamWinDriver.TestConnectDisconnect" executed="True" result="Success" success="True" time="2.036" asserts="2" />
+                              <test-case name="NAR.Tests.Capture.Drivers.WebCamWinAPI.WebCamWinDriver.TestGrabbingTime" executed="True" result="Success" success="True" time="5.874" asserts="0" />
+                              <test-case name="NAR.Tests.Capture.Drivers.WebCamWinAPI.WebCamWinDriver.TestGrabFrame" executed="True" result="Success" success="True" time="1.900" asserts="2" />
+                              <test-case name="NAR.Tests.Capture.Drivers.WebCamWinAPI.WebCamWinDriver.TestRecordStartAndStopByEvent" executed="True" result="Success" success="True" time="0.918" asserts="0" />
+                              <test-case name="NAR.Tests.Capture.Drivers.WebCamWinAPI.WebCamWinDriver.TestRecordStartAndStopByTimeLimit" executed="True" result="Success" success="True" time="1.900" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="Wrapper" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="ImageProcessing" executed="True" result="Failure" success="False" time="14.056" asserts="0">
+                <results>
+                  <test-suite type="Namespace" name="Borders" executed="True" result="Success" success="True" time="3.392" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="BooleanEdgeCommandTests" executed="True" result="Success" success="True" time="0.558" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.BooleanEdgeCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.240" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.BooleanEdgeCommandTests.TestExecuteByLimiar" executed="True" result="Success" success="True" time="0.155" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CannyCommandTests" executed="True" result="Success" success="True" time="0.269" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.CannyCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.156" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.CannyCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="DifferenceCommandTests" executed="True" result="Success" success="True" time="0.151" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.DifferenceCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.140" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="EdgeDetectQuickCommandTests" executed="True" result="Success" success="True" time="0.248" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.EdgeDetectQuickCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.119" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.EdgeDetectQuickCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.114" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="EuclidianDistanceCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.EuclidianDistanceCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.EuclidianDistanceCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HomogenityCommandTests" executed="True" result="Success" success="True" time="0.152" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.HomogenityCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.132" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HorizontalCommandTests" executed="True" result="Success" success="True" time="0.152" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.HorizontalCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.142" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HumanCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.HumanCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.HumanCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="KirshCommandTests" executed="True" result="Success" success="True" time="0.230" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.KirshCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.120" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.KirshCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LaplaceCommandTests" executed="True" result="Success" success="True" time="0.200" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.LaplaceCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.LaplaceCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LaplaceOfGaussianCommandTests" executed="True" result="Success" success="True" time="0.210" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.LaplaceOfGaussianCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.LaplaceOfGaussianCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MarrHildrethCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.MarrHildrethCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.MarrHildrethCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MaskCommandTests" executed="True" result="Success" success="True" time="0.020" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.MaskCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MultiFlashCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.MultiFlashCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.MultiFlashCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PrewittCommandTests" executed="True" result="Success" success="True" time="0.262" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.PrewittCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.110" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.PrewittCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.142" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RichardsCommandTests" executed="True" result="Success" success="True" time="0.322" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.RichardsCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.162" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.RichardsCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.148" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RobinsonCommandTests" executed="True" result="Success" success="True" time="0.274" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.RobinsonCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.143" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.RobinsonCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.122" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SobelCommandTests" executed="True" result="Success" success="True" time="0.274" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.SobelCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.130" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Borders.SobelCommandTests.TestExecuteInGrayScale" executed="True" result="Success" success="True" time="0.143" asserts="196613" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="CameraCalibration" executed="True" result="Success" success="True" time="0.107" asserts="0">
+                    <results>
+                      <test-suite type="Namespace" name="Tsai" executed="True" result="Success" success="True" time="0.046" asserts="0">
+                        <results>
+                          <test-suite type="TestFixture" name="ComputeTests" executed="True" result="Success" success="True" time="0.046" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.CameraCalibration.Tsai.ComputeTests.TestCalibration" executed="True" result="Success" success="True" time="0.037" asserts="0" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TsaiCameraCalibrationCommandTests" executed="True" result="Success" success="True" time="0.060" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.CameraCalibration.TsaiCameraCalibrationCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Contours" executed="True" result="Success" success="True" time="1.474" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="GreedContoursCommandTests" executed="True" result="Success" success="True" time="0.120" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.GreedContoursCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.110" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="KassBlobCommandTests" executed="True" result="Success" success="True" time="0.030" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.KassBlobCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.020" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MooreNeighborBlobCommandTests" executed="True" result="Success" success="True" time="0.360" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.MooreNeighborBlobCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.350" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RadialSweepBlobCommandTests" executed="True" result="Success" success="True" time="0.364" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.RadialSweepBlobCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.354" asserts="518405" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SnakeBlobCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.SnakeBlobCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SquareBlobCommandTests" executed="True" result="Success" success="True" time="0.560" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.SquareBlobCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.550" asserts="518405" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TheoPavlidisBlobCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Contours.TheoPavlidisBlobCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Corner" executed="True" result="Success" success="True" time="0.730" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="BeaudetCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.BeaudetCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="CssCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.CssCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="DericheCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.DericheCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ForstnerCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.ForstnerCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HarrisCornersCommandTests" executed="True" result="Success" success="True" time="0.150" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.HarrisCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.140" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="KitchenRosenfeldCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.KitchenRosenfeldCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MoravecCornersCommandTests" executed="True" result="Success" success="True" time="0.330" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.MoravecCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.310" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PlesseyCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.PlesseyCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ShiTomasiCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.ShiTomasiCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.010" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SusanCornersCommandTests" executed="True" result="Success" success="True" time="0.140" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.SusanCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.140" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TrajkovicHedley4CornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.TrajkovicHedley4CornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TrajkovicHedley8CornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.TrajkovicHedley8CornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="WangBradCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.WangBradCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ZhengWangCornersCommandTests" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Corner.ZhengWangCornersCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Distance" executed="True" result="Success" success="True" time="0.130" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="CalcDistanceCommandTests" executed="True" result="Success" success="True" time="0.130" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Distance.CalcDistanceCommandTests.TestCalcule" executed="True" result="Success" success="True" time="0.110" asserts="196614" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Effects" executed="True" result="Success" success="True" time="1.702" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="DilatationCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.DilatationCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="EmbossLaplacianCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.EmbossLaplacianCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ErosionCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.ErosionCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="GaussianBlurCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.GaussianBlurCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="GaussianCommandTests" executed="True" result="Success" success="True" time="0.312" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.GaussianCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.302" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MeanRemovalCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.MeanRemovalCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MoireCommandTests" executed="True" result="Success" success="True" time="0.150" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.MoireCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.140" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PixelateCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.PixelateCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SharpenCommandTests" executed="True" result="Success" success="True" time="0.120" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.SharpenCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SmoothCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.SmoothCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SphereCommandTests" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.SphereCommandTests.TestExecute" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SwirlCommandTests" executed="True" result="Success" success="True" time="0.120" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.SwirlCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.120" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TimeWarpCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.TimeWarpCommandTests.TestExecute" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="WaterCommandTests" executed="True" result="Success" success="True" time="0.120" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.WaterCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.110" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="ZhangSuenCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Effects.ZhangSuenCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.110" asserts="196613" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="ImageInvokerTests" executed="True" result="Success" success="True" time="0.140" asserts="0">
+                    <results>
+                      <test-case name="NAR.Tests.ImageProcessing.ImageInvokerTests.TestAddCommands" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+                      <test-case name="NAR.Tests.ImageProcessing.ImageInvokerTests.TestExecuteCommand" executed="True" result="Success" success="True" time="0.120" asserts="196613" />
+                      <test-case name="NAR.Tests.ImageProcessing.ImageInvokerTests.TestRemoveCommands" executed="True" result="Success" success="True" time="0.010" asserts="1" />
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Images" executed="True" result="Success" success="True" time="2.552" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="AverageCommandTests" executed="True" result="Success" success="True" time="0.200" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.AverageCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.110" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Images.AverageCommandTests.TestExecuteGrayscale" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="Namespace" name="Binarization" executed="True" result="Success" success="True" time="1.062" asserts="0">
+                        <results>
+                          <test-suite type="Namespace" name="Adaptative" executed="True" result="Success" success="True" time="0.130" asserts="0">
+                            <results>
+                              <test-suite type="TestFixture" name="BradleyLocalThresholdingCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                                <results>
+                                  <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.Adaptative.BradleyLocalThresholdingCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                                </results>
+                              </test-suite>
+                              <test-suite type="TestFixture" name="IterativeThresholdCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                                <results>
+                                  <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.Adaptative.IterativeThresholdCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                    <reason>
+                                      <message><![CDATA[]]></message>
+                                    </reason>
+                                  </test-case>
+                                </results>
+                              </test-suite>
+                              <test-suite type="TestFixture" name="OtsuThresholdCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                                <results>
+                                  <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.Adaptative.OtsuThresholdCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                    <reason>
+                                      <message><![CDATA[]]></message>
+                                    </reason>
+                                  </test-case>
+                                </results>
+                              </test-suite>
+                              <test-suite type="TestFixture" name="SISThresholdCommandTests" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
+                                <results>
+                                  <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.Adaptative.SISThresholdCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                    <reason>
+                                      <message><![CDATA[]]></message>
+                                    </reason>
+                                  </test-case>
+                                </results>
+                              </test-suite>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="BayerDitheringCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.BayerDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="BurkesDitheringCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.BurkesDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ErrorDiffusionDitheringCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.ErrorDiffusionDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ErrorDiffusionToAdjacentNeighborsCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.ErrorDiffusionToAdjacentNeighborsCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="FloydSteinbergDitheringCommandTests" executed="True" result="Success" success="True" time="0.132" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.FloydSteinbergDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.122" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="JarvisJudiceNinkeDitheringCommandTests" executed="True" result="Success" success="True" time="0.120" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.JarvisJudiceNinkeDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.110" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="OrderedDitheringCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.OrderedDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="SierraDitheringCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.SierraDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="StuckiDitheringCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.StuckiDitheringCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ThresholdCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.ThresholdCommandTests.TestExecuteGrayScale" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ThresholdWithCarryCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.Binarization.ThresholdWithCarryCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="BlackWhiteCommandTests" executed="True" result="Success" success="True" time="0.180" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.BlackWhiteCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Images.BlackWhiteCommandTests.TestExecuteCalculatingLimiar" executed="True" result="Success" success="True" time="0.080" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="BlueCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.BlueCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="Namespace" name="ColorReduction" executed="True" result="Inconclusive" success="False" time="0.020" asserts="0">
+                        <results>
+                          <test-suite type="TestFixture" name="BurkesColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.BurkesColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ColorErrorDiffusionToAdjacentNeighborsCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.ColorErrorDiffusionToAdjacentNeighborsCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ColorImageQuantizerCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.ColorImageQuantizerCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="ErrorDiffusionColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.ErrorDiffusionColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="FloydSteinbergColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.FloydSteinbergColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="JarvisJudiceNinkeColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.JarvisJudiceNinkeColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="MedianCutCubeCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.MedianCutCubeCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="MedianCutQuantizerCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.MedianCutQuantizerCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="OrderedColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.OrderedColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="SierraColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.SierraColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                          <test-suite type="TestFixture" name="StuckiColorDitheringCommandTests" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                            <results>
+                              <test-case name="NAR.Tests.ImageProcessing.Images.ColorReduction.StuckiColorDitheringCommandTests.TestExecuteGrayScale" executed="False" result="Ignored">
+                                <reason>
+                                  <message><![CDATA[]]></message>
+                                </reason>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="GrayscaleCommandTests" executed="True" result="Success" success="True" time="0.200" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.GrayscaleCommandTests.TestExecuteByAverage" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Images.GrayscaleCommandTests.TestExecuteByLuminance" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="GreenCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.GreenCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.080" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="InvertCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.InvertCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LuminosityCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.LuminosityCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="NormalizeCommandTests" executed="True" result="Success" success="True" time="0.180" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.NormalizeCommandTests.TestExecuteGrayscale" executed="True" result="Success" success="True" time="0.080" asserts="196613" />
+                          <test-case name="NAR.Tests.ImageProcessing.Images.NormalizeCommandTests.TestExecuteRGB" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RedCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.RedCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.080" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="RotateCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.RotateCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SepiaCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Images.SepiaCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Motion" executed="True" result="Success" success="True" time="0.342" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="DetectMotionCommandTests" executed="True" result="Success" success="True" time="0.242" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Motion.DetectMotionCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.211" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MotionDetectorTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Motion.MotionDetectorTests.TestDetect" executed="True" result="Success" success="True" time="0.090" asserts="196618" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Operations" executed="True" result="Success" success="True" time="0.400" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="DivisionCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operations.DivisionCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MultiplicationCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operations.MultiplicationCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SubtractionCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operations.SubtractionCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SumCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operations.SumCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Operators" executed="True" result="Success" success="True" time="0.646" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="AndCommandTests" executed="True" result="Success" success="True" time="0.112" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operators.AndCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.103" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="NandCommandTests" executed="True" result="Success" success="True" time="0.111" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operators.NandCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.103" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="NorCommandTests" executed="True" result="Success" success="True" time="0.108" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operators.NorCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.099" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="NotCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operators.NotCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="OrCommandTests" executed="True" result="Success" success="True" time="0.110" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operators.OrCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.100" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="XorCommandTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Operators.XorCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.080" asserts="196613" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Pixels" executed="True" result="Success" success="True" time="0.200" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="CountPixelCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Pixels.CountPixelCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.090" asserts="196614" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PixelCounterTests" executed="True" result="Success" success="True" time="0.090" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Pixels.PixelCounterTests.TestCount" executed="True" result="Success" success="True" time="0.080" asserts="196614" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Segmentation" executed="True" result="Failure" success="False" time="0.850" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="HoughCircleTransformationCommandTests" executed="True" result="Success" success="True" time="0.100" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughCircleTransformationCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.040" asserts="0" />
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughCircleTransformationCommandTests.TestShowCircles" executed="True" result="Success" success="True" time="0.060" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HoughCircleTransformationTests" executed="True" result="Success" success="True" time="0.200" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughCircleTransformationTests.TestCollectCircles" executed="True" result="Success" success="True" time="0.020" asserts="2" />
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughCircleTransformationTests.TestHoughGraphics" executed="True" result="Success" success="True" time="0.170" asserts="360005" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HoughLineTransformationCommandTests" executed="False" result="Ignored">
+                        <reason>
+                          <message><![CDATA[]]></message>
+                        </reason>
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughLineTransformationCommandTests.TestExecute" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughLineTransformationCommandTests.TestShowLines" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="HoughLineTransformationTests" executed="True" result="Failure" success="False" time="0.550" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughLineTransformationTests.TestCollectLines" executed="True" result="Success" success="True" time="0.010" asserts="2" />
+                          <test-case name="NAR.Tests.ImageProcessing.Segmentation.HoughLineTransformationTests.TestHoughGraphics" executed="True" result="Failure" success="False" time="0.530" asserts="135402">
+                            <failure>
+                              <message><![CDATA[  Expected: 254
+  But was:  255
+]]></message>
+                              <stack-trace><![CDATA[at NAR.Tests.ImageProcessing.BaseCommand.CheckAllBytes(Byte[] image, Byte[] compared) in d:\Thoris\Projetos\NAR\build\source\NAR.Tests\ImageProcessing\BaseCommand.cs:line 107
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Size" executed="True" result="Success" success="True" time="0.148" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="SizeCalculatorCommandTests" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Size.SizeCalculatorCommandTests.TestExecute" executed="False" result="Ignored">
+                            <reason>
+                              <message><![CDATA[]]></message>
+                            </reason>
+                          </test-case>
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="SizeCalculatorTests" executed="True" result="Success" success="True" time="0.128" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Size.SizeCalculatorTests.TestCalculate" executed="True" result="Success" success="True" time="0.117" asserts="196614" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Textures" executed="True" result="Success" success="True" time="0.892" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="CloudsTextureCommandTests" executed="True" result="Success" success="True" time="0.232" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Textures.CloudsTextureCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.217" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="LabyrinthTextureCommandTests" executed="True" result="Success" success="True" time="0.138" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Textures.LabyrinthTextureCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.132" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="MarbleTextureCommandTests" executed="True" result="Success" success="True" time="0.138" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Textures.MarbleTextureCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.130" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="TextileTextureCommandTests" executed="True" result="Success" success="True" time="0.180" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Textures.TextileTextureCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.170" asserts="196613" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="WoodTextureCommandTests" executed="True" result="Success" success="True" time="0.200" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Textures.WoodTextureCommandTests.TestExecute" executed="True" result="Success" success="True" time="0.200" asserts="196613" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="Namespace" name="Util" executed="True" result="Success" success="True" time="0.020" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="HistogramTests" executed="True" result="Success" success="True" time="0.020" asserts="0">
+                        <results>
+                          <test-case name="NAR.Tests.ImageProcessing.Util.HistogramTests.TestCalculateFromGrayscale" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                          <test-case name="NAR.Tests.ImageProcessing.Util.HistogramTests.TestCalculateFromRGB" executed="True" result="Success" success="True" time="0.000" asserts="7" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+              <test-suite type="Namespace" name="Model" executed="True" result="Success" success="True" time="0.020" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="ImageBitmapTests" executed="True" result="Success" success="True" time="0.020" asserts="0">
+                    <results>
+                      <test-case name="NAR.Tests.Model.ImageBitmapTests.TestBytesFromConstructorByImage" executed="True" result="Success" success="True" time="0.000" asserts="2" />
+                      <test-case name="NAR.Tests.Model.ImageBitmapTests.TestImageAndByteArrayFromConstryctorByImageAndByteArray" executed="True" result="Success" success="True" time="0.010" asserts="5" />
+                      <test-case name="NAR.Tests.Model.ImageBitmapTests.TestImageFromConstructorByByteArray" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

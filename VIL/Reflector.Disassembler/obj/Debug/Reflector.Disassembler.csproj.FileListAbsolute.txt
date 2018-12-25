@@ -1,0 +1,5 @@
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\bin\Debug\Reflector.Disassembler.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\bin\Debug\Reflector.Disassembler.pdb
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\obj\Debug\Reflector.Disassembler.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\obj\Debug\Reflector.Disassembler.pdb
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\obj\Debug\Reflector.Disassembler.csprojResolveAssemblyReference.cache

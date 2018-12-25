@@ -1,0 +1,16 @@
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\List\Chess.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\List\Coin.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\List\Sample.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\List\SteveJobs.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\List\TurtleNinja.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\Sample.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Resources\Sample2.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Templates\HtmlReportTemplate.htm
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\Templates\HtmlIndex.htm
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\NAR.Tests.Confiability.exe
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\NAR.Tests.Confiability.pdb
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\NAR.dll
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\NAR.pdb
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Release\NAR.xml
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\obj\x86\Release\NAR.Tests.Confiability.exe
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\obj\x86\Release\NAR.Tests.Confiability.pdb

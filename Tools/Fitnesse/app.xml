@@ -1,0 +1,9 @@
+<suiteConfig>
+<ApplicationUnderTest>
+<AddAssembly>D:\Thoris\Projetos\CI\CISample\CI.Sample.Fit.Tests\bin\Release\CI.Sample.Fit.Tests.dll</AddAssembly>
+<AddNamespace>CI.Sample.Fit.Tests</AddNamespace>
+</ApplicationUnderTest>
+<FileExclusions>
+<Add>^\.svn$</Add>
+</FileExclusions>
+</suiteConfig>

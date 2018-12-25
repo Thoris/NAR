@@ -1,0 +1,7 @@
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\bin\Debug\Vil.Core.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\bin\Debug\Vil.Core.pdb
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\bin\Debug\Reflector.Disassembler.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\bin\Debug\Reflector.Disassembler.pdb
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\obj\Debug\Vil.Core.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\obj\Debug\Vil.Core.pdb
+D:\Thoris\Projetos\NAR\trunk\VIL\Vil.Core\obj\Debug\Vil.Core.csprojResolveAssemblyReference.cache

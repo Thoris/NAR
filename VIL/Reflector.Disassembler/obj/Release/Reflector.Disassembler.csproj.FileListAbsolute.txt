@@ -1,0 +1,4 @@
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\bin\Release\Reflector.Disassembler.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\bin\Release\Reflector.Disassembler.pdb
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\obj\Release\Reflector.Disassembler.dll
+D:\Thoris\Projetos\NAR\trunk\VIL\Reflector.Disassembler\obj\Release\Reflector.Disassembler.pdb

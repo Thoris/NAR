@@ -1,0 +1,16 @@
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\List\Sample.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\Sample.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\NAR.Tests.Confiability.exe
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\NAR.Tests.Confiability.pdb
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\NAR.dll
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\NAR.pdb
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\obj\x86\Debug\NAR.Tests.Confiability.exe
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\obj\x86\Debug\NAR.Tests.Confiability.pdb
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Templates\HtmlReportTemplate.htm
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Templates\HtmlIndex.htm
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\Sample2.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\List\TurtleNinja.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\List\coin.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\List\Chess.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\bin\Debug\Resources\List\SteveJobs.bmp
+D:\Thoris\Projetos\NAR\trunk\NAR.Tests.Confiability\obj\x86\Debug\NAR.Tests.Confiability.csprojResolveAssemblyReference.cache

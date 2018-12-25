@@ -1,0 +1,6 @@
+!3 !-fit-!
+|'''Date: '''|!-2:31:39 PM (BRT) on Sábado, Abril 21, 2012-!|
+|'''Test Page: '''|.HelloWorld|
+|'''Command: '''|!-Runner.exe -r fitnesse.fitserver.FitServer,fit.dll D:\Thoris\Projetos\CI\CISample\CI.Sample.Fit.Tests\bin\Release\CI.Sample.Fit.Tests.dll Thoris-PC 8888 1-!|
+|'''Exit code: '''|!-0-!|
+|'''Time elapsed: '''|!-1.763 seconds-!|

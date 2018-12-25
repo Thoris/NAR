@@ -1,0 +1,268 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{FCF7CE23-6F0B-464A-8539-C1134E779D45}"
+	ProjectSection(SolutionItems) = preProject
+		nart.build = nart.build
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferencedComponents", "ReferencedComponents", "{5B9FA17E-95C9-4969-80A9-953561BFCD8E}"
+	ProjectSection(SolutionItems) = preProject
+		ReferencedComponents\log4net.dll = ReferencedComponents\log4net.dll
+		ReferencedComponents\log4net.xml = ReferencedComponents\log4net.xml
+		ReferencedComponents\nunit.framework.dll = ReferencedComponents\nunit.framework.dll
+		ReferencedComponents\Rhino.Mocks.dll = ReferencedComponents\Rhino.Mocks.dll
+		ReferencedComponents\Rhino.Mocks.xml = ReferencedComponents\Rhino.Mocks.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9EBBB467-39DB-42FE-8FD6-D24ECE18F5C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sandcastle", "Sandcastle", "{7BEFCCFD-EE5E-496C-AACD-A070DD48980D}"
+	ProjectSection(SolutionItems) = preProject
+		Sandcastle\NARToolkit.shfbproj = Sandcastle\NARToolkit.shfbproj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{020D2EE2-3A3A-47C1-A449-10250EEBFEAF}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Changelog.txt = Documentation\Changelog.txt
+		Documentation\Documentacao.docx = Documentation\Documentacao.docx
+		Documentation\log4net-sdk-net-4.0.chm = Documentation\log4net-sdk-net-4.0.chm
+		Documentation\TSAI.xlsx = Documentation\TSAI.xlsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FxCop", "FxCop", "{C42A0A72-3506-4797-B3A1-002378BF535F}"
+	ProjectSection(SolutionItems) = preProject
+		FxCop\NARToolkit.FxCop = FxCop\NARToolkit.FxCop
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpProject", "HelpProject", "{E4EEAEEE-44D9-4207-B4B4-D7E7ABC8E5B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Install", "Install", "{D8349CDB-A8D6-4EC7-93C4-004CE79DC40C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArManagement", "ArManagement", "{A8BADD66-8569-4ACC-85F8-9BE86A49D2F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KIT", "KIT", "{F77081A3-7AF5-4FDF-99F7-34B8000A9EA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAR", "NAR\NAR.csproj", "{4014E958-01B5-43CF-A03C-BACB17E190B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Architecture", "Architecture", "{9E83A137-67F5-46AF-B2BB-9F2B204C11C5}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Architecture\Camera-DesignPattern.jpg = Documentation\Architecture\Camera-DesignPattern.jpg
+		Documentation\Architecture\Camera-DesignPattern.uml = Documentation\Architecture\Camera-DesignPattern.uml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SpringNet", "SpringNet", "{CF7DB725-4653-4995-BF47-A2A7A7A49C08}"
+	ProjectSection(SolutionItems) = preProject
+		ReferencedComponents\SpringNet\Common.Logging.dll = ReferencedComponents\SpringNet\Common.Logging.dll
+		ReferencedComponents\SpringNet\Spring.Aop.dll = ReferencedComponents\SpringNet\Spring.Aop.dll
+		ReferencedComponents\SpringNet\Spring.Aop.xml = ReferencedComponents\SpringNet\Spring.Aop.xml
+		ReferencedComponents\SpringNet\Spring.Core.dll = ReferencedComponents\SpringNet\Spring.Core.dll
+		ReferencedComponents\SpringNet\Spring.Core.xml = ReferencedComponents\SpringNet\Spring.Core.xml
+		ReferencedComponents\SpringNet\Spring.Data.dll = ReferencedComponents\SpringNet\Spring.Data.dll
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate20.dll = ReferencedComponents\SpringNet\Spring.Data.NHibernate20.dll
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate20.xml = ReferencedComponents\SpringNet\Spring.Data.NHibernate20.xml
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate21.dll = ReferencedComponents\SpringNet\Spring.Data.NHibernate21.dll
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate21.xml = ReferencedComponents\SpringNet\Spring.Data.NHibernate21.xml
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate30.dll = ReferencedComponents\SpringNet\Spring.Data.NHibernate30.dll
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate30.xml = ReferencedComponents\SpringNet\Spring.Data.NHibernate30.xml
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate31.dll = ReferencedComponents\SpringNet\Spring.Data.NHibernate31.dll
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate31.xml = ReferencedComponents\SpringNet\Spring.Data.NHibernate31.xml
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate32.dll = ReferencedComponents\SpringNet\Spring.Data.NHibernate32.dll
+		ReferencedComponents\SpringNet\Spring.Data.NHibernate32.xml = ReferencedComponents\SpringNet\Spring.Data.NHibernate32.xml
+		ReferencedComponents\SpringNet\Spring.Data.xml = ReferencedComponents\SpringNet\Spring.Data.xml
+		ReferencedComponents\SpringNet\Spring.Messaging.dll = ReferencedComponents\SpringNet\Spring.Messaging.dll
+		ReferencedComponents\SpringNet\Spring.Messaging.Ems.dll = ReferencedComponents\SpringNet\Spring.Messaging.Ems.dll
+		ReferencedComponents\SpringNet\Spring.Messaging.Ems.xml = ReferencedComponents\SpringNet\Spring.Messaging.Ems.xml
+		ReferencedComponents\SpringNet\Spring.Messaging.Nms.dll = ReferencedComponents\SpringNet\Spring.Messaging.Nms.dll
+		ReferencedComponents\SpringNet\Spring.Messaging.Nms.xml = ReferencedComponents\SpringNet\Spring.Messaging.Nms.xml
+		ReferencedComponents\SpringNet\Spring.Messaging.xml = ReferencedComponents\SpringNet\Spring.Messaging.xml
+		ReferencedComponents\SpringNet\Spring.Scheduling.Quartz.dll = ReferencedComponents\SpringNet\Spring.Scheduling.Quartz.dll
+		ReferencedComponents\SpringNet\Spring.Scheduling.Quartz.xml = ReferencedComponents\SpringNet\Spring.Scheduling.Quartz.xml
+		ReferencedComponents\SpringNet\Spring.Services.dll = ReferencedComponents\SpringNet\Spring.Services.dll
+		ReferencedComponents\SpringNet\Spring.Services.xml = ReferencedComponents\SpringNet\Spring.Services.xml
+		ReferencedComponents\SpringNet\Spring.Template.Velocity.dll = ReferencedComponents\SpringNet\Spring.Template.Velocity.dll
+		ReferencedComponents\SpringNet\Spring.Template.Velocity.xml = ReferencedComponents\SpringNet\Spring.Template.Velocity.xml
+		ReferencedComponents\SpringNet\Spring.Testing.Microsoft.dll = ReferencedComponents\SpringNet\Spring.Testing.Microsoft.dll
+		ReferencedComponents\SpringNet\Spring.Testing.Microsoft.xml = ReferencedComponents\SpringNet\Spring.Testing.Microsoft.xml
+		ReferencedComponents\SpringNet\Spring.Testing.NUnit.dll = ReferencedComponents\SpringNet\Spring.Testing.NUnit.dll
+		ReferencedComponents\SpringNet\Spring.Testing.NUnit.xml = ReferencedComponents\SpringNet\Spring.Testing.NUnit.xml
+		ReferencedComponents\SpringNet\Spring.Web.dll = ReferencedComponents\SpringNet\Spring.Web.dll
+		ReferencedComponents\SpringNet\Spring.Web.Extensions.dll = ReferencedComponents\SpringNet\Spring.Web.Extensions.dll
+		ReferencedComponents\SpringNet\Spring.Web.Extensions.xml = ReferencedComponents\SpringNet\Spring.Web.Extensions.xml
+		ReferencedComponents\SpringNet\Spring.Web.Mvc.dll = ReferencedComponents\SpringNet\Spring.Web.Mvc.dll
+		ReferencedComponents\SpringNet\Spring.Web.Mvc.xml = ReferencedComponents\SpringNet\Spring.Web.Mvc.xml
+		ReferencedComponents\SpringNet\Spring.Web.Mvc3.dll = ReferencedComponents\SpringNet\Spring.Web.Mvc3.dll
+		ReferencedComponents\SpringNet\Spring.Web.Mvc3.xml = ReferencedComponents\SpringNet\Spring.Web.Mvc3.xml
+		ReferencedComponents\SpringNet\Spring.Web.xml = ReferencedComponents\SpringNet\Spring.Web.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAR.Forms.Tests", "NAR.Forms.Tests\NAR.Forms.Tests.csproj", "{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAR.Console.Tests", "NAR.Console.Tests\NAR.Console.Tests.csproj", "{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAR.Tests", "NAR.Tests\NAR.Tests.csproj", "{089E88FF-F48B-4929-B3AF-65065E988011}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Atomiq", "Atomiq", "{0EA08E51-38FA-4454-A3E8-AB57870C7677}"
+	ProjectSection(SolutionItems) = preProject
+		Atomiq\Nar.atomiqProj = Atomiq\Nar.atomiqProj
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VIL", "VIL\VIL.csproj", "{C312F9C0-9CBD-4031-918E-C6D8B88530D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vil.Core", "VIL\Vil.Core\Vil.Core.csproj", "{80B39989-AC69-4602-BE80-7D1420F84A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflector.Disassembler", "VIL\Reflector.Disassembler\Reflector.Disassembler.csproj", "{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VIL Application", "VIL Application", "{85B20EF5-EF15-4F55-BCBF-11B0FD272595}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Corners", "Corners", "{690D5F34-8942-4591-8660-2AA2E037A724}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Corners\CornerDetection.pdf = Documentation\Corners\CornerDetection.pdf
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAR.Tests.Confiability", "NAR.Tests.Confiability\NAR.Tests.Confiability.csproj", "{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TsaiCalcTest", "TsaiCalcTest\TsaiCalcTest.vcxproj", "{7879C40B-F634-41B7-981A-06B010764AA8}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Release|Win32.ActiveCfg = Release|Any CPU
+		{4014E958-01B5-43CF-A03C-BACB17E190B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Debug|Win32.ActiveCfg = Debug|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Debug|x86.ActiveCfg = Debug|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Debug|x86.Build.0 = Debug|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Release|Any CPU.ActiveCfg = Release|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Release|Mixed Platforms.Build.0 = Release|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Release|Win32.ActiveCfg = Release|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Release|x86.ActiveCfg = Release|x86
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01}.Release|x86.Build.0 = Release|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Debug|Win32.ActiveCfg = Debug|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Debug|x86.ActiveCfg = Debug|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Debug|x86.Build.0 = Debug|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Release|Any CPU.ActiveCfg = Release|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Release|Win32.ActiveCfg = Release|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Release|x86.ActiveCfg = Release|x86
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628}.Release|x86.Build.0 = Release|x86
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Release|Win32.ActiveCfg = Release|Any CPU
+		{089E88FF-F48B-4929-B3AF-65065E988011}.Release|x86.ActiveCfg = Release|Any CPU
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Debug|Win32.ActiveCfg = Debug|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Debug|x86.ActiveCfg = Debug|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Debug|x86.Build.0 = Debug|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Release|Any CPU.ActiveCfg = Release|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Release|Mixed Platforms.Build.0 = Release|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Release|Win32.ActiveCfg = Release|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Release|x86.ActiveCfg = Release|x86
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7}.Release|x86.Build.0 = Release|x86
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Release|Win32.ActiveCfg = Release|Any CPU
+		{80B39989-AC69-4602-BE80-7D1420F84A51}.Release|x86.ActiveCfg = Release|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Release|Win32.ActiveCfg = Release|Any CPU
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Debug|Win32.ActiveCfg = Debug|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Debug|x86.ActiveCfg = Debug|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Debug|x86.Build.0 = Debug|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Release|Any CPU.ActiveCfg = Release|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Release|Mixed Platforms.Build.0 = Release|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Release|Win32.ActiveCfg = Release|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Release|x86.ActiveCfg = Release|x86
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582}.Release|x86.Build.0 = Release|x86
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Debug|Win32.Build.0 = Debug|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Debug|x86.ActiveCfg = Debug|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Release|Any CPU.ActiveCfg = Release|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Release|Win32.ActiveCfg = Release|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Release|Win32.Build.0 = Release|Win32
+		{7879C40B-F634-41B7-981A-06B010764AA8}.Release|x86.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF7DB725-4653-4995-BF47-A2A7A7A49C08} = {5B9FA17E-95C9-4969-80A9-953561BFCD8E}
+		{0AE3BF35-3227-43D7-B7A5-51DD00E17D01} = {9EBBB467-39DB-42FE-8FD6-D24ECE18F5C7}
+		{9ECCEE04-422A-4A4D-A7A4-CA39165CE628} = {9EBBB467-39DB-42FE-8FD6-D24ECE18F5C7}
+		{089E88FF-F48B-4929-B3AF-65065E988011} = {9EBBB467-39DB-42FE-8FD6-D24ECE18F5C7}
+		{90A2A30F-7B4D-4CA3-A4F9-79F2729B0582} = {9EBBB467-39DB-42FE-8FD6-D24ECE18F5C7}
+		{9E83A137-67F5-46AF-B2BB-9F2B204C11C5} = {020D2EE2-3A3A-47C1-A449-10250EEBFEAF}
+		{690D5F34-8942-4591-8660-2AA2E037A724} = {020D2EE2-3A3A-47C1-A449-10250EEBFEAF}
+		{4014E958-01B5-43CF-A03C-BACB17E190B0} = {F77081A3-7AF5-4FDF-99F7-34B8000A9EA2}
+		{80B39989-AC69-4602-BE80-7D1420F84A51} = {85B20EF5-EF15-4F55-BCBF-11B0FD272595}
+		{D1A5D09E-AAF0-4E9B-B4DD-3031F8B8C0F3} = {85B20EF5-EF15-4F55-BCBF-11B0FD272595}
+		{C312F9C0-9CBD-4031-918E-C6D8B88530D7} = {85B20EF5-EF15-4F55-BCBF-11B0FD272595}
+	EndGlobalSection
+EndGlobal

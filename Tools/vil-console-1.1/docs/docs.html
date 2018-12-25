@@ -1,0 +1,388 @@
+<html>
+	<head>
+		<title>Vil - Documentation</title>
+	</head>
+	<Body alink="#e00000" link="#0000ff" vlink="#5858e8" leftmargin="0" rightmargin="0" bgcolor="#ffffff">
+		<center>
+			<table width="774" border="0" cellpadding="0" cellspacing="0">
+<tr ><td ><img src="vil.png"></td><td colspan=2 ><font size=8 color=darkblue>&nbsp;&nbsp;&nbsp;Command-line Documentation...</font></td></tr>
+				<tr bgcolor="#ffffff">
+					<td valign="top"><br>
+						<a href="./screens.html"><img src="ascr.png" width="80" height="20" border="0"></a><br>
+						<br>
+						<a href="./cmetrics.html"><img src="amet.png" width="80" height="20" border="0"></a><br>
+						<br>
+						<a href="./docs.html"><img src="adoc.png" width="80" height="20" border="0"></a><br>
+						<br>
+						<a href="mailto:info@1bot.com"><img src="acon.png" width="80" height="20" border="0"></a><br>
+					</td>
+					<td><br>
+						<table cellpadding=5>
+							<tr>
+								<td><font size="5" color="darkblue">Usage:</font><br>
+									vil /assembly=ASSEMBLYNAME1[,ASSEMBLYNAME2,...] [OPTIONS]<br>
+									<br>- or -<br><br> 
+                                                                        vil /a=ASSEMBLYNAME1[,ASSEMBLYNAME2,...] [OPTIONS]<br>
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td><font size="5" color="darkblue">Description:</font><br>
+									Vil lists out contents and details of .Net Assemblies, and also provides  
+									complexity, coupling, cohesion, and inheritance metrics.
+									<br>
+								</td>
+							</tr>
+							<tr>
+								<td><br>
+									<font size="5" color="darkblue">Examples:</font><br>
+								        For examples, please see the examples on the <a href="./screens.html">screenshots page</a>, and in several of the descriptions farther down on this page.
+                                                                
+                                                                
+                                                                </td>
+							</tr>
+							<tr>
+								<td>
+									<font size="5" color="darkblue">Required:</font><br>
+									<table ID="Table1">
+										<tr bgcolor=ddffdd>
+											<td valign=top>/a, /assembly=<b>ASSEMBLYNAME</b>1[,<b>ASSEMBLYNAME</b>2,...]</td>
+											<td>
+												<P>The ASSEMBLYNAME is the name of the .Net assembly to be examined by vil.&nbsp; 
+													The path seperator character needs to be correct to the OS being used.&nbsp; 
+													Use '/' for *nix and '\' for Windows.&nbsp; A special wildcard exists - 
+													"*.net".&nbsp; This does not look for files with a ".net" extension, but 
+													instead will retrieve all ".dll" and ".exe" files.&nbsp; Multiple assemblies 
+													can be declared by using wildcards or commas to seperate different assembly 
+													names.&nbsp; Here are some examples:</P>
+												<UL>
+													<LI>
+													vil /assembly=DataSender.dll
+													<LI>
+													vil /assembly=*.dll
+													<LI>
+													mono vil.exe /assembly='~/*.exe'&nbsp; [LINUX]
+													<LI>
+													vil /a='..\*.net'
+													<LI>
+													vil /a='Reader.dll,Writer.dll'
+													<LI>
+													vil /a='project/bin/*.dll'&nbsp; [LINUX]
+													<LI>
+														vil /a=Sys*.dll</LI></UL>
+												<P>File names&nbsp;generally do not&nbsp;need to be in quotes.&nbsp;&nbsp;But, if the 
+													filename contains whitespace,&nbsp;single quotes should be used - as in some of 
+													the examples above.&nbsp;&nbsp;
+												</P>
+												<P></P>
+												<P>Assemblies need to be in a place where they would run - so that vil can 
+													determine where to load dependencies from.</P>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<font size="5" color="darkblue">Options:</font><br>
+									<table>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/m, /metrics=<b>METRIC</b>1[,<b>METRIC</b>2,...]</td>
+											<td>Adds output columns for each <b>METRIC</b> specified. Available metrics are:<br>
+												modules, impTypes, classes, interfaces, enumerations, structs, types, LOC, 
+												dead, events, impInterfaces, WMC, DIT, CBO, RFC, NOC, constructors, methods, 
+												imps, fields, CC, params, maxStack, locals, tryblocks, abstracts, ecouplings, 
+												acouplings, abstractness, properties, instability, distance, LCOM&nbsp;
+												<br>
+												<a href="cmetrics.html">Click here for full description of metrics</a><br><br>
+                                                                                                Examples:
+                                                                                                <ul>
+                                                                                                <li>vil /a=system.dll /m=cc,loc,params /scope=method
+                                                                                                <li>vil /a=app.exe  /metrics=wmc,cbo,lcom,rfc /scope=class
+                                                                                                </ul>
+                                                                                                </td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/e, /element</td>
+											<td>Indicates whether a line is for a class, module, method, field, etc...</td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/return</td>
+											<td>Indicates the return Type for methods.</td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/static</td>
+											<td>Indicates whether each&nbsp;element is static or instance.</td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/visibility</td>
+											<td>Indicates visibility of an element (public, private, protected, etc...).</td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/long</td>
+											<td>List&nbsp;long type&nbsp;names. This will cause the full namespace of each 
+												element to be included in the listing. Although more precise, this&nbsp;can 
+												hinder readability.</td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/notrim</td>
+											<td>When output is to console or to a non-html file, the default is to use 
+												abbreviated text, where viable, to make it more presentable in the 
+												console.&nbsp; With the "notrim" option, no abbreviation will occur.&nbsp;</td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/s, /sort=metric</td>
+											<td>Sorts(descending) the output by a specified metric.</td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/sorta=metric</td>
+											<td>Sorts(ascending) the output by a specified metric.</td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/h, /head[=<b>NUM</b>]</td>
+											<td>Limits output to the top <b>NUM</b> elements. If not specified, default is 15.</td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/tail[=<b>NUM</b>]</td>
+											<td>Limits output to the bottom <b>NUM</b> elements. If not specified, default is 
+												15.</td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/out=<b>FILENAME</b></td>
+											<td>Send output to a file named <b>FILENAME</b>, as opposed to the console.</td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<TD valign=top>/outHtml=<B>FILENAME</B></TD>
+											<TD>Send output as an Html Page, along with a summary of the query itself, &nbsp;to 
+												a file named <B>FILENAME.</B></TD>
+										</TR>
+										<tr bgcolor=ddffdd>
+											<TD valign=top>/outHtmlShort=<B>FILENAME</B></TD>
+											<TD>Send output as an Html Page to a file named <B>FILENAME</B>.&nbsp; Same as 
+												above, but without the query details.</TD>
+										</TR>
+										<tr bgcolor=ddf4ff>
+											<TD valign=top>/outHtmlTable=<B>FILENAME</B></TD>
+											<TD>Returns just an Html table to a file named <STRONG>FILENAME. </STRONG>Same as 
+												above, but without the Html and Body tags, and without the embedded 
+												stylesheet.&nbsp; This is useful for situations where the metrics table will 
+												be&nbsp;part of a page that another application or script will assemble.</TD>
+										</TR>
+										<tr bgcolor=ddffdd>
+											<TD valign=top>/outXml=<B>FILENAME</B></TD>
+											<TD>Returns an XML document to a file named <STRONG>FILENAME. </STRONG> The document
+                                                                                        defines the request, as well as the results.  The XML is very readable and self-explanatory.
+										       </TD>
+										</TR>
+										<tr bgcolor=ddf4ff>
+											<TD valign=top>/title='<STRONG>TITLE</STRONG>'</TD>
+											<TD>The&nbsp;<STRONG>TITLE</STRONG> needs to be in quotes.&nbsp; If generating an 
+												Html output(from the 3 preceding options), the title option can be used to give 
+												a title that will be displayed in the metrics table in Html.</TD>
+										</TR>
+										<tr bgcolor=ddffdd>
+											<TD valign=top>/sc, /scope=<STRONG>SCOPE</STRONG></TD>
+											<TD>
+												<P>By default, vil will&nbsp;return almost&nbsp;all code elements (class, method, 
+													etc.) that exist in the assemblies of a query.&nbsp; This can be considerably 
+													more than one desires.&nbsp; Scope allows the ability to limit the output to 
+													certain categories of code elements.&nbsp; Example: &nbsp;"/scope=method" 
+													&nbsp;would only return methods.</P>
+												<P>Valid scopes are:</P>
+												<UL>
+													<LI>
+													all
+													<LI>
+													assembly
+													<LI>
+													type (includes classes, structs, enumerations, and interfaces)
+													<LI>
+													method
+													<LI>
+													imp (includes methods and constructors)
+													<LI>
+													imptype (includes classes and structs)
+													<LI>
+													class
+													<LI>
+													enumeration
+													<LI>
+													interface
+													<LI>
+													struct
+													<LI>
+													constructor
+													<LI>
+														default</LI></UL>
+												<P>&nbsp;</P>
+											</TD>
+										</TR>
+										<tr bgcolor=ddf4ff>
+											<TD valign=top>/mo, /module</TD>
+											<TD>Indicates which module (DLL or EXE) a code element came from.&nbsp; This is 
+												helpful in multi-assembly queries.</TD>
+										</TR>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/f, /filter='<b>EXPRESSION</b>'</td>
+											<td>Limits output to records that meet the criteria specified in the <b>EXPRESSION</b>.
+                                                                                                <br>
+												<br>Example <b>#1</b>: <font color="darkgreen">/filter='methods&gt;4'</font> would limit 
+												output to classes and structs that have greater than 4 methods.
+                                                                                                <br>
+												<br>Example <b>#2</b>: <font color="darkgreen">/filter='params&gt;4 && locals&lt;7'</font> would limit 
+												output to methods and constructors that have more than 4 parameters and less than 7 local variables.
+                                                                                                
+                                                                                                
+                                                                                                <br><br>
+                                                                                                <b>Expression Notes</b>:
+                                                                                                <ul>
+                                                                                                <li>||  is the "or" symbol.
+                                                                                                <li>&& is the "and" symbol.
+                                                                                                <li>&lt;, &gt;, &lt;=, &gt;=, ==, and != may all be used in expressions.
+                                                                                                <li>parenthesis () may be used in expressions.
+                                                                                                <li>generally, expression syntax is c# syntax (which is also pretty much the same as java) 
+                                                                                                </ul>
+                                                                                                <br> 
+                                                                                                
+                                                                                                
+                                                                                                
+                                                                                                </td>
+										</tr>
+										<tr bgcolor=ddf4ff>
+											<TD valign=top>/noJudge</TD>
+											<TD>The "noJudge" option disables&nbsp;judgemental color-coding of metrics.&nbsp; 
+												If running in a Linux console, or using any of the Html outputs, metric values 
+												are color coded.&nbsp; By default, a "red" metric is for metrics with a very 
+												high value (99th percentile), and a "yellow" metric is used for metrics with a 
+												high value (approx. 97+ percentile).&nbsp; Percentiles are based on a sampling 
+												of numerous opensource .Net software projects.&nbsp;
+											</TD>
+										</TR>
+										<tr bgcolor=ddffdd>
+											<TD valign=top>/nix</TD>
+											<TD>
+												<P>This option is only applicable when running on Microsoft Windows.&nbsp; This 
+													option generates output to console, or to a file using the "/out" option, as 
+													though it were being run on Linux.&nbsp; The implication of this is that 
+													judgemental color coding escape sequences will be generated in the 
+													output.&nbsp; You would not want to use this if you were on Microsoft Windows 
+													using the standard "command.exe" and "cmd.exe" consoles.&nbsp; This option has 
+													value when you are using a *nix emulation console in Microsoft Windows, such as 
+													Cygwin, MKS Toolkit,&nbsp;or Microsoft Windows Services for Unix.&nbsp;&nbsp;
+												</P>
+												<P>** Note:&nbsp; When using this option without the "/out" option, and therefor 
+													having output come straight to the console, the output contains the 
+													color-escape sequences - but they will not be rendered correctly unless you 
+													have the output piped through a Linux command - such as "cat".</P>
+												<P>Example:&nbsp; To get color output to a *nix emulation shell:</P>
+												<P>vil /assembly=*.dll /metrics=loc /nix | cat</P>
+												<P>&nbsp;</P>
+											</TD>
+										</TR>
+										<tr bgcolor=ddf4ff>
+											<td valign=top>/noLogo</td>
+											<td>Suppresses version and copyright notices.</td>
+										</tr>
+										<tr bgcolor=ddffdd>
+											<td valign=top>/test</td>
+											<td>By default, classes that are test fixtures for either NUnit, MbUnit, or csUnit will be ignored for analysis purposes.  To be very precise,
+                                                                                        this also includes any class that inherits from a class that has an attribute that inherits from any of these: <br>
+                                                                                                <ul>
+                                                                                                <li>NUnit.Framework.TestFixtureAttribute
+                                                                                                <li>csUnit.TestFixtureAttribute
+                                                                                                <li>MbUnit.Core.Framework.TestFixturePatternAttribute
+                                                                                                </ul>
+                                                                                          
+                                                                                          The "/test" option will cause test fixtures for NUnit, MbUnit, and csUnit to be treated as any other class  - and included in metrics calculations.
+                                                                                        </td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<font size="5" color="darkblue">Files of Interest: (These files are in the same location as vil.exe)</font><br>
+									<table ID="Table1">
+										<tr bgcolor=ddf4ff>
+											<td valign=top width=75>judge.vjf</td>
+											<td>
+												<P>This file contains a list of metrics and border-line values that are used for color coding results in HTML and in *Nix shell output.  Each line starts with either 
+                                                                                                "imp", "type", or "module".  "imp" lines are lines that define ranges for methods and constructors.  "Type" lines are for classes and structs, and "module" is for modules and assemblies.
+                                                                                                The next item on a line is the name of a metric.  The 3rd item on the line is the threshold value for that metric that should be considered "very high".  The 4th, and optional, item is for threshold values that are considered "high".
+                                                                                                <br><br>Example:<br><br>
+                                                                                                imp cc 25 18
+                                                                                                <br>       <br>
+                                                                                                The line indicates that for methods and constructors, cc(cyclomatic complexity) values of 25 or more are tagged as "very high" for color coding purposes, and 
+                                                                                                values of 18 or more are considered "high".  
+                                                                                                
+                                                                                                <br>
+                                                                                                The first 2 lines in the file:<br><br>
+                                                                                                consoleveryhigh 31
+                                                                                                <br>consolehigh 33
+                                                                                                    <br>
+                                                                                                <br>... indicate the ANSI color codes that get used for console color on *nix emulation shells and on Linux.  For HTML output, the colors are determined by a stylesheet in "vil.css".
+                                                                                                 <br> <br><i>The values currently in this file are not totally arbitrary.  They are based on an analysis of many .Net open-source software applications.  The "very high" values are generally at the 99th percentile or higher, while the "high" values are generally at the 97th or higher percentile.</i>
+                                                                                                     </p>
+											</td>
+										</tr>
+                                                                                
+										<tr bgcolor=ddffdd>
+											<td valign=top width=75>vil.css</td>
+											<td>
+												<P>
+                                                                                                This is a stylesheet that can control many style elements within HTML output.  It is fairly self-explanatory.
+                                                                                              </p>  
+											</td>
+										</tr>
+                                                                                
+										<tr bgcolor=ddf4ff>
+											<td valign=top width=75>vil.exe.config</td>
+											<td>
+												<P>
+                                                                                                This is a .Net configuration file.  You will likely not need to alter this.  However, if you are working with Microsoft.Net versions other than the released versions of .Net 1.0 or 1.1, you may need to alter this file to allow vil to work with special, or yet to be released, versions of Microsoft.Net.     </p>
+											</td>
+										</tr> 
+
+										<tr bgcolor=ddffdd>
+											<td valign=top width=75>vil.lic</td>
+											<td>
+												<P>
+                                                                                                You will probably not have this file.  If you need to analyze sets of assemblies that exceed 100 types(classes, enums, interfaces, and structs), you can acquire a "vil.lic" file (by <a href="mailto:info@1bot.com">emailing</a>)that will allow an unlimited number of types.
+                                                                                              </p>  
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<P>
+										<font size="5" color="darkblue">Syntax Note:</font><br>
+										Although the examples in this document use ( /metrics= ) syntax, all of the 
+										following are recognized and treated equally:
+										<br>
+										<br>
+										/metrics=cc,cbo
+										<br>
+										-metrics cc,cbo
+										<br>
+										--metrics=cc,cbo
+										<br>
+										-metrics=cc,cbo
+									</P>
+									<P>Options are not case sensitive. File names may need to be in quotes.&nbsp;</P>
+								</td>
+							</tr>
+						</table>
+						<br>
+						<br>
+						<br>
+						<center>
+							<font size="2" color="darkblue">©2003-2004 1bot.com. All rights reserved.</font></center>
+					</td>
+					<td width="1"></td>
+				</tr>
+			</table>
+		</center>
+	</Body>
+</html>

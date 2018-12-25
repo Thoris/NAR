@@ -1,0 +1,148 @@
+<root>
+  <PartCoverReport date="2009-04-18T15:38:47.1551700+02:00">
+    <File id="2" url="C:\TestClass.cs" />
+    <File id="1" url="C:\TestClass2.cs" />
+    <Assembly name="Test" module="C:\Test.exe" />
+    <Type asm="Test" name="Test.Program" flags="1048576">
+      <Method name="Main" sig="void  (string[])" flags="145" iflags="0" />
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0" />
+    </Type>
+    <Type asm="Test" name="Test.TestClass" flags="1048576">
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <pt visit="1" pos="0" len="6" />
+        <pt visit="1" pos="6" len="1" />
+      </Method>
+      <Method name="SampleFunction" sig="void  ()" flags="134" iflags="0">
+        <pt visit="1" pos="0" len="1" fid="2" sl="11" sc="3" el="11" ec="4" />
+        <pt visit="1" pos="1" len="11" fid="2" sl="12" sc="4" el="12" ec="37" />
+        <pt visit="1" pos="12" len="3" fid="2" sl="14" sc="4" el="14" ec="15" />
+        <pt visit="1" pos="15" len="9" fid="2" sl="16" sc="4" el="16" ec="15" />
+        <pt visit="1" pos="24" len="3" />
+        <pt visit="0" pos="27" len="1" fid="2" sl="17" sc="4" el="17" ec="5" />
+        <pt visit="0" pos="28" len="11" fid="2" sl="18" sc="5" el="18" ec="33" />
+        <pt visit="0" pos="39" len="1" fid="2" sl="19" sc="4" el="19" ec="5" />
+        <pt visit="0" pos="40" len="2" />
+        <pt visit="1" pos="42" len="1" fid="2" sl="21" sc="4" el="21" ec="5" />
+        <pt visit="1" pos="43" len="11" fid="2" sl="22" sc="5" el="22" ec="34" />
+        <pt visit="1" pos="54" len="1" fid="2" sl="23" sc="4" el="23" ec="5" />
+        <pt visit="1" pos="55" len="1" fid="2" sl="24" sc="3" el="24" ec="4" />
+      </Method>
+    </Type>
+    <Type asm="Test" name="Test.TestClass2" flags="1048576">
+      <Method name="SampleFunction" sig="void  (string)" flags="134" iflags="0">
+        <pt visit="1" pos="0" len="15" />
+        <pt visit="1" pos="15" len="1" fid="1" sl="11" sc="3" el="11" ec="4" />
+        <pt visit="1" pos="16" len="18" fid="1" sl="12" sc="4" el="12" ec="44" />
+        <pt visit="1" pos="34" len="38" fid="1" sl="14" sc="4" el="14" ec="44" />
+        <pt visit="1" pos="72" len="1" fid="1" sl="16" sc="4" el="16" ec="11" />
+        <pt visit="1" pos="73" len="8" fid="1" sl="16" sc="25" el="16" ec="32" />
+        <pt visit="1" pos="81" len="2" />
+        <pt visit="4" pos="83" len="8" fid="1" sl="16" sc="13" el="16" ec="21" />
+        <pt visit="4" pos="91" len="1" fid="1" sl="17" sc="4" el="17" ec="5" />
+        <pt visit="4" pos="92" len="7" fid="1" sl="18" sc="5" el="18" ec="29" />
+        <pt visit="4" pos="99" len="1" fid="1" sl="19" sc="4" el="19" ec="5" />
+        <pt visit="5" pos="100" len="9" fid="1" sl="16" sc="22" el="16" ec="24" />
+        <pt visit="5" pos="109" len="26" />
+        <pt visit="1" pos="135" len="1" />
+        <pt visit="1" pos="136" len="38" fid="1" sl="21" sc="4" el="21" ec="67" />
+        <pt visit="1" pos="174" len="24" fid="1" sl="23" sc="4" el="23" ec="96" />
+        <pt visit="1" pos="198" len="4" />
+        <pt visit="1" pos="202" len="1" fid="1" sl="24" sc="4" el="24" ec="5" />
+        <pt visit="1" pos="203" len="23" fid="1" sl="25" sc="5" el="25" ec="40" />
+        <pt visit="1" pos="226" len="1" fid="1" sl="26" sc="4" el="26" ec="5" />
+        <pt visit="1" pos="227" len="2" fid="1" sl="27" sc="3" el="27" ec="4" />
+      </Method>
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <pt visit="1" pos="0" len="6" />
+        <pt visit="1" pos="6" len="1" />
+      </Method>
+      <Method name="&lt;SampleFunction&gt;b__0" sig="int  (int)" flags="145" iflags="0">
+        <pt visit="4" pos="0" len="6" fid="1" sl="14" sc="37" el="14" ec="42" />
+        <pt visit="4" pos="6" len="2" />
+      </Method>
+    </Type>
+    <Type asm="Test" name="Test.TestClass2&lt;&gt;c__DisplayClass3" flags="1048835">
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <pt visit="1" pos="0" len="6" />
+        <pt visit="1" pos="6" len="1" />
+      </Method>
+      <Method name="&lt;SampleFunction&gt;b__1" sig="bool  (string)" flags="134" iflags="0">
+        <pt visit="3" pos="0" len="16" fid="1" sl="23" sc="36" el="23" ec="86" />
+        <pt visit="3" pos="16" len="2" />
+      </Method>
+    </Type>
+  </PartCoverReport>
+  <PartCoverReport date="2009-04-18T15:38:47.1551700+02:00">
+    <File id="2" url="C:\TestClass.cs" />
+    <File id="1" url="C:\TestClass2.cs" />
+    <Assembly name="Test" module="C:\Test.exe" />
+    <Type asm="Test" name="Test.Program" flags="1048576">
+      <Method name="Main" sig="void  (string[])" flags="145" iflags="0" />
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0" />
+    </Type>
+    <Type asm="Test" name="Test.TestClass" flags="1048576">
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <pt visit="1" pos="0" len="6" />
+        <pt visit="1" pos="6" len="1" />
+      </Method>
+      <Method name="SampleFunction" sig="void  ()" flags="134" iflags="0">
+        <pt visit="1" pos="0" len="1" fid="2" sl="11" sc="3" el="11" ec="4" />
+        <pt visit="1" pos="1" len="11" fid="2" sl="12" sc="4" el="12" ec="37" />
+        <pt visit="1" pos="12" len="3" fid="2" sl="14" sc="4" el="14" ec="15" />
+        <pt visit="1" pos="15" len="9" fid="2" sl="16" sc="4" el="16" ec="15" />
+        <pt visit="1" pos="24" len="3" />
+        <pt visit="0" pos="27" len="1" fid="2" sl="17" sc="4" el="17" ec="5" />
+        <pt visit="0" pos="28" len="11" fid="2" sl="18" sc="5" el="18" ec="33" />
+        <pt visit="0" pos="39" len="1" fid="2" sl="19" sc="4" el="19" ec="5" />
+        <pt visit="0" pos="40" len="2" />
+        <pt visit="1" pos="42" len="1" fid="2" sl="21" sc="4" el="21" ec="5" />
+        <pt visit="1" pos="43" len="11" fid="2" sl="22" sc="5" el="22" ec="34" />
+        <pt visit="1" pos="54" len="1" fid="2" sl="23" sc="4" el="23" ec="5" />
+        <pt visit="1" pos="55" len="1" fid="2" sl="24" sc="3" el="24" ec="4" />
+      </Method>
+    </Type>
+    <Type asm="Test" name="Test.TestClass2" flags="1048576">
+      <Method name="SampleFunction" sig="void  (string)" flags="134" iflags="0">
+        <pt visit="1" pos="0" len="15" />
+        <pt visit="1" pos="15" len="1" fid="1" sl="11" sc="3" el="11" ec="4" />
+        <pt visit="1" pos="16" len="18" fid="1" sl="12" sc="4" el="12" ec="44" />
+        <pt visit="1" pos="34" len="38" fid="1" sl="14" sc="4" el="14" ec="44" />
+        <pt visit="1" pos="72" len="1" fid="1" sl="16" sc="4" el="16" ec="11" />
+        <pt visit="1" pos="73" len="8" fid="1" sl="16" sc="25" el="16" ec="32" />
+        <pt visit="1" pos="81" len="2" />
+        <pt visit="4" pos="83" len="8" fid="1" sl="16" sc="13" el="16" ec="21" />
+        <pt visit="4" pos="91" len="1" fid="1" sl="17" sc="4" el="17" ec="5" />
+        <pt visit="4" pos="92" len="7" fid="1" sl="18" sc="5" el="18" ec="29" />
+        <pt visit="4" pos="99" len="1" fid="1" sl="19" sc="4" el="19" ec="5" />
+        <pt visit="5" pos="100" len="9" fid="1" sl="16" sc="22" el="16" ec="24" />
+        <pt visit="5" pos="109" len="26" />
+        <pt visit="1" pos="135" len="1" />
+        <pt visit="1" pos="136" len="38" fid="1" sl="21" sc="4" el="21" ec="67" />
+        <pt visit="1" pos="174" len="24" fid="1" sl="23" sc="4" el="23" ec="96" />
+        <pt visit="1" pos="198" len="4" />
+        <pt visit="1" pos="202" len="1" fid="1" sl="24" sc="4" el="24" ec="5" />
+        <pt visit="1" pos="203" len="23" fid="1" sl="25" sc="5" el="25" ec="40" />
+        <pt visit="1" pos="226" len="1" fid="1" sl="26" sc="4" el="26" ec="5" />
+        <pt visit="1" pos="227" len="2" fid="1" sl="27" sc="3" el="27" ec="4" />
+      </Method>
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <pt visit="1" pos="0" len="6" />
+        <pt visit="1" pos="6" len="1" />
+      </Method>
+      <Method name="&lt;SampleFunction&gt;b__0" sig="int  (int)" flags="145" iflags="0">
+        <pt visit="4" pos="0" len="6" fid="1" sl="14" sc="37" el="14" ec="42" />
+        <pt visit="4" pos="6" len="2" />
+      </Method>
+    </Type>
+    <Type asm="Test" name="Test.TestClass2&lt;&gt;c__DisplayClass3" flags="1048835">
+      <Method name=".ctor" sig="void  ()" flags="6278" iflags="0">
+        <pt visit="1" pos="0" len="6" />
+        <pt visit="1" pos="6" len="1" />
+      </Method>
+      <Method name="&lt;SampleFunction&gt;b__1" sig="bool  (string)" flags="134" iflags="0">
+        <pt visit="3" pos="0" len="16" fid="1" sl="23" sc="36" el="23" ec="86" />
+        <pt visit="3" pos="16" len="2" />
+      </Method>
+    </Type>
+  </PartCoverReport>
+</root>

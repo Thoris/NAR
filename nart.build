@@ -1,0 +1,1119 @@
+<?xml version="1.0"?>
+<project name="NART" default="build"> 
+
+  <!-- ****************************************************************************************-->
+  <!--                                   Properties                                            -->
+  <!-- ****************************************************************************************-->
+
+
+
+
+  <!-- =============================================================== -->
+  <!--                          BUILD PATHS                            -->
+  <property name="base.path" value="${project::get-base-directory()}" />
+  <property name="base.path.parent" value="${directory::get-parent-directory('')}" />
+  <property name="base.path.build" value="${path::combine(base.path.parent, 'build')}" />
+  <property name="base.path.build.release" value="${path::combine(base.path.build,'dist')}" />
+  <property name="base.path.build.source" value="${path::combine(base.path.build,'source')}" />
+  <property name="base.path.build.nunit" value="${path::combine(base.path.build,'nunit')}" />
+  <property name="base.path.build.coverage" value="${path::combine(base.path.build,'coverage')}" />
+
+  <property name="task.path" value="${path::combine(base.path.build.source,'NAR.Portal')}" />
+  <property name="base.path.build.tests.application" value="${path::combine(base.path.build.source, 'NAR.Tests')}" />
+  
+  
+  <property name="tools.base.dir" value="C:\Tools" dynamic="true" /> 
+  <!--<property name="tools.base.dir" value="${path::combine(base.path,'Tools')}" dynamic="true" />-->
+
+  <!-- =============================================================== -->
+  <!--                          MAIL PROPERTIES                        -->
+
+  <!-- Raise setup -->
+  <property name="nant.onfailure" value="onFail" />
+  <property name="nant.onsuccess" value="onSuccess" />
+
+  <!-- Mail setup -->
+  <property name="mail.server" value="localhost" />
+  <property name="mail.toFailList" value="thorisangelo@gmail.com" />
+  <property name="mail.toSuccessList" value="thorisangelo@gmail.com" />
+  <property name="mail.failMessage" value="Build on ${environment::get-machine-name()} for ${project::get-name()} failed.  (${environment::get-version()}-${platform::get-name()})" />
+  <property name="mail.successMessage" value ="Build on ${environment::get-machine-name()} for ${project::get-name()} succeded" />
+
+  <!-- Other -->
+  <property name="mail.onSuccessfull" value="false" unless="${property::exists('mail.onSuccessfull')}" />
+  <property name="mail.onFailure" value="true" unless="${property::exists('mail.onFailure')}" />
+
+
+  <!-- =============================================================== -->
+  <!--                          FRAMEWORK                              -->
+  <!--<property name="nant.settings.currentframework" value="net-3.5" />
+  <property name="MSBuild" value="${framework::get-framework-directory('net-3.5')}\msbuild.exe" />-->
+  <property name="nant.settings.currentframework" value="net-4.0" />
+  <property name="MSBuild" value="${framework::get-framework-directory('net-4.0')}\msbuild.exe" />
+
+
+  <!-- =============================================================== -->
+  <!--                      DBDEPLOY PROPERTIES                        -->
+  
+  <property name="database.scripts.path" value="./nar.database/build/dbdeploy/1.0" />
+  <property name="database.scripts.changeLogTable" value="changelog" />
+  
+  <!-- =============================================================== -->
+  <!--                      INITIALIZATION TOOLS                       -->
+  <target name="initializeTools">
+
+    <echo message="Tools Path: ${tools.base.dir}" />
+
+    <!-- =============================================================== -->
+    <!--                      PARTCOVER PROPERTIES                       -->
+    <property name="partcover.base.dir" value="${tools.base.dir}\PartCover" dynamic="true" />
+    <property name="partcover.exe" value="${partcover.base.dir}\PartCover.exe" dynamic="true"/>
+
+
+    <!-- =============================================================== -->
+    <!--                      REPORTGENERATOR PROPERTIES                 -->
+    <property name="reportgenerator.base.dir" value="${tools.base.dir}\ReportGenerator" dynamic="true" />
+    <property name="reportgenerator.exe" value="${reportgenerator.base.dir}\ReportGenerator.exe" dynamic="true"/>
+
+
+    <!-- =============================================================== -->
+    <!--                          NUNIT PROPERTIES                       -->
+    <property name="nunit.base.dir" value="${tools.base.dir}\NUnit" dynamic="true" />
+    <property name="nunit.exe" value="${nunit.base.dir}\nunit-console.exe" dynamic="true"/>
+
+    <property name="file.tests.application" value="NAR.Tests.dll" />
+    <property name="file.tests.application.summary" value="NAR.Tests.xml" />
+
+    <!-- =============================================================== -->
+    <!--                          COVERAGE PROPERTIES                    -->
+    <property name="coverage.reports.dir.root" value="${base.path.build}" overwrite="false"/>
+    <property name="coverage.result.file.prefix" value="CoverageResult-" overwrite="false" />
+    <property name="coverage.result.file" value="${coverage.result.file.prefix}NAR_application.xml" dynamic="true" overwrite="true"/>
+    <property name="include.coverage.assembly" value="*" overwrite="true" dynamic="true" />
+
+
+    <!-- =============================================================== -->
+    <!--                          NUNIT REPORT                           -->
+    <property name="file.tests.results" value="${file.tests.application}-Results.xml" />
+    <property name="file.tests.results.fullpath" value="${path::combine(base.path.build.nunit, file.tests.results)}" />
+    <property name="tests.results.html.output" value="${base.path.build.nunit}\NUnitReport.html" />
+
+
+    <!-- =============================================================== -->
+    <!--                          SANDCASTLE                             -->
+    <property name="sandcastle.build" value="C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe" />
+    <property name="sandcastle.working" value="${path::combine(base.path.build.source, 'WorkingFolder')}" />
+    <property name="sandcastle.project.folder" value="${path::combine(base.path.build.source, 'Sandcastle')}" />
+    <property name="sandcastle.project.folder.file" value="${path::combine(sandcastle.project.folder, 'NARToolkit.shfbproj')}" />
+    <property name="sandcastle.target.folder" value="${path::combine(base.path.build, 'Help')}" />
+    <echo message="SandCastle Build: ${sandcastle.build}" />
+
+
+    <!-- =============================================================== -->
+    <!--                          FXCOP                                  -->
+    <property name="fxcop.output.dir" value="${base.path.build}\FxCop" />
+    <property name="fxcop.base.dir" value="${tools.base.dir}\FxCop 1.36" dynamic="true" />
+    <property name="fxcopcmd.exe" value="${fxcop.base.dir}\fxcopcmd.exe" />
+    <property name="fxcop.xml" value="${fxcop.output.dir}\fxcop.xml" />
+    <property name="fxcop.project.name" value="${path::combine(base.path.build.source,'FxCop\NARToolkit.FxCop')}" />
+
+    <!-- =============================================================== -->
+    <!--                          SOURCEMONITOR                          -->
+    <property name="sourcemonitor.base.dir" value="${tools.base.dir}\SourceMonitor" dynamic="true" />
+    <property name="sourcemonitor.exe" value="${sourcemonitor.base.dir}\SourceMonitor.exe" dynamic="true"/>
+    <property name="sourcemonitor.command" value="${path::combine(sourcemonitor.base.dir,'CommandCs.xml')}" dynamic="true"/>
+    <property name="sourcemonitor.output.dir" value="${base.path.build}\SourceMonitor" />
+
+
+    <!-- =============================================================== -->
+    <!--                          FITNESSE                               -->
+    <property name="fitnesse.base.dir" value="${tools.base.dir}\Fitnesse" dynamic="true" />
+    <property name="fitnesse.exe" value="${fitnesse.base.dir}\Runner.exe" dynamic="true" />
+    
+    <property name="fitnesse.output.dir" value="${base.path.build}\Fitnesse" />
+    <property name="fitnesse.server" value="localhost" />
+    <property name="fitnesse.port" value="8888" />
+    <property name="fitnesse.output.file" value="${fitnesse.base.dir}/test-results" />
+
+    <property name="fitnesse.test" value="${path::combine(base.path.build.source, 'NAR.Fit.Tests\Bin\Release\NAR.Fit.Tests.dll')}" />
+
+    <!-- =============================================================== -->
+    <!--                          SIMIAN                                 -->
+    <property name="simian.base.dir" value="${tools.base.dir}\simian\bin" dynamic="true" />
+    <property name="simian.exe" value="${simian.base.dir}\simian-2.3.33.exe" dynamic="true"/>
+    <property name="simian.output.dir" value="${base.path.build}\Simian" />
+
+    <!-- =============================================================== -->
+    <!--                          ZIP DATA                               -->
+    <property name="zip.output.dir" value="${base.path.build}\Zip" />
+
+
+    <!-- =============================================================== -->
+    <!--                          ATOMIQ                                 -->
+    <property name="atomiq.base.dir" value="${tools.base.dir}\Atomiq" dynamic="true" />
+    <property name="atomiq.exe" value="${atomiq.base.dir}\Atomiq.Console.exe" dynamic="true"/>
+    <property name="atomiq.projectfile" value="${base.path.build.source}\Atomiq\nar.atomiqProj" />
+    <property name="atomiq.output.dir" value="${base.path.build}\Atomiq" />
+    <property name="atomiq.output.file" value="${atomiq.output.dir}\AtomiqResult.html" />
+
+
+    <!-- =============================================================== -->
+	<!--                          CONFIABILITY                           -->
+	<property name="confiability.base.dir" value="${base.path.build.source}\NAR.Tests.Confiability\Bin\Release\" dynamic="true" />
+	<property name="confiability.exe" value="${confiability.base.dir}\NAR.Tests.Confiability.exe" dynamic="true"/>
+	<property name="confiability.output.dir" value="${base.path.build}\Confiability" />
+	
+
+	  <!-- ***************************************************************************************-->
+    <!--                                   Executions                                           -->
+    <!-- ***************************************************************************************-->
+
+    <!-- /////////////////////////////  LOAD LIBRARIES ///////////////////////    -->
+    <!--<loadtasks assembly="${database.scripts.path}/Net.Sf.Dbdeploy.dll" />
+    <loadtasks>
+      <fileset>
+        <include name="C:/tools/nantcontrib-0.85-bin/nantcontrib-0.85/bin/**/*.dll" />
+        <include name="${tools.base.dir}/nantcontrib-0.85-bin/nantcontrib-0.85/bin/**/*.dll" />
+        <include name="${tools.base.dir}/FTPTask/bin/release/ftptask.dll" />
+      </fileset>
+    </loadtasks>-->
+    
+    
+    
+    
+  </target>
+  
+  
+  
+  
+
+
+
+
+
+  <!-- /////////////////////////////  TARGETS ///////////////////////    -->
+
+  <target name="dev">
+    
+    <property name="mail.onSuccessfull" value="true" />
+
+    <property name="folder.config.env" value="dev" />
+    
+
+    <call target="initializeTools" />
+    <call target="build" />
+    <call target="copyConfigs" />
+    <call target="copyImageFiles" />
+    <call target="copyLogViewConfigs" />
+
+    <property name="db.credentials" value="User Id=ci;Password=ci;" />
+    <property name="db.servername" value="BuildServer\SQL2008" />
+    <property name="db.initialcatalog" value="CISample" />
+
+    <property name="database.scripts.path" value="./nar.database/build/dbdeploy/1.0" />
+    <property name="database.scripts.changeLogTable" value="ChangeLog" />
+    <call target="runDatabaseScripts" />
+
+    <call target="runSourceMonitor" />
+    <call target="runSimian" />
+
+    <call target="unitTests" />
+
+
+    <call target="calculate.partcover" />
+    <call target="generate.reportgenerator.report" />
+    <call target="generateFxCopReporting" />
+    <!-- call target="deleteSourceFolder" /  Because of Fitnesse application -->
+    
+    <property name="deployment.site" value="c:\netapps\DEV\CISample" />
+    <call target="copyToDeploymentSite" />
+
+
+    <!-- Performing Selenium tests -->
+    <property name="base.path.build.tests.application" value="${path::combine(base.path.build.source, 'NAR.Web.Tests')}" dynamic="true" />
+    <property name="file.tests.application" value="NAR.Web.Tests.dll" dynamic="true" />
+    <call target="unitTests" />
+    
+  </target>
+
+
+  <target name="test">
+
+
+    <property name="server.deploy.username" value="Administrator" />
+    <property name="server.deploy.password" value="***********" />
+    <property name="server.deploy.hostname" value="**********" />
+    <property name="server.deploy.drive" value="E" />
+    <property name="server.deploy.folder" value="Inetpub\wwwroot\Scc" />
+    <property name="server.deploy.maintenance.file" value="app_offline_.htm" />
+    <property name="server.deploy.backup.folder" value="oldversions" />
+    
+    <property name="folder.config.env" value="test" />
+    
+
+    <call target="initializeTools" />
+    <call target="build" />
+    <call target="copyConfigs" />
+    <call target="copyImageFiles" />
+    <call target="copyLogViewConfigs" />
+
+    <property name="db.credentials" value="User Id=scc_test_admin;Password=scc_test_admin;" />
+    <property name="db.servername" value="FSTSJC-7FF9\SQL2008" />
+    <property name="db.initialcatalog" value="SCC_TEST" />
+
+    <property name="database.scripts.path" value="./NAR.database/build/dbdeploy/1.0" />
+    <property name="database.scripts.changeLogTable" value="ChangeLog" />
+    <!-- call target="runDatabaseScripts" /  -->
+
+
+
+    <call target="createDistributionZipFile" />
+    
+    <!--<call target="deployToNetworkServer" />-->
+    <!-- call target="deleteSourceFolder" / -->
+    
+    
+  </target>
+
+  <target name="prod">
+
+
+    <property name="folder.config.env" value="prod" />
+    <call target="initializeTools" />
+    
+
+    <call target="build" />
+    <call target="copyConfigs" />
+    <call target="copyLogViewConfigs" />
+    <call target="copyImageFiles" />
+
+    <property name="db.credentials" value="User Id=usuarioCI;Password=usuarioCI;" />
+    <property name="db.servername" value="CISample.mssql.somee.com" />
+    <property name="db.initialcatalog" value="CISample" />
+    <call target="runDatabaseScripts" />
+
+    <property name="project.deployment.ftp.server" value="www.ci.somee.com" />
+    <property name="project.deployment.ftp.user" value="thoris" />
+    <property name="project.deployment.ftp.password" value="@Thoris01" />
+    <property name="project.deployment.path.remote" value="www.ci.somee.com" />
+    <call target="deployToFtp" />
+
+
+    <call target="createDistributionZipFile" />
+    
+    <call target="deleteSourceFolder" />
+  </target>
+
+
+  <target name="doc">          
+    <call target="initializeTools" />
+    <call target="createDocumentation" />
+  </target>
+
+
+  <target name="local.dev">
+
+    <property name="folder.config.env" value="dev" />
+    <property name="CCNetLabel" value="1.0.0.0" />
+    <property name="tools.base.dir" value="${path::combine(base.path,'Tools')}" overwrite="true" />
+
+    <call target="initializeTools" />
+	  <call target="build" />
+    
+    
+    <!--<call target="copyConfigs" />
+    <call target="copyImageFiles" />
+    <call target="copyLogViewConfigs" />-->
+
+    <!--<property name="db.credentials" value="User Id=scc_dev_admin;Password=scc_dev_admin;" />
+    <property name="db.servername" value="localhost\SQL2008" />
+    <property name="db.initialcatalog" value="SCC_DEV" />
+
+    <property name="database.scripts.path" value="./NAR.database/build/dbdeploy/1.0" />
+    <property name="database.scripts.changeLogTable" value="ChangeLog" />
+    <call target="runDatabaseScripts" />-->
+
+    <call target="unitTestsReport" />
+
+    <call target="calculate.partcover" />
+    <call target="generate.reportgenerator.report" />
+
+    <call target="generateFxCopReporting" />
+
+    <call target="createDistributionZipFile" />
+
+    <!--<call target="deleteSourceFolder" />-->
+    
+    <!--<property name="base.path.build.tests.application" value="${path::combine(base.path.build.source, 'NAR.Web.Tests')}" dynamic="true" />
+    <property name="file.tests.application" value="NAR.Web.Tests.dll" dynamic="true" />
+    <call target="unitTests" />-->
+
+    <!--<call target="runSimian" />--> 
+    
+    
+    <!--<call target="fitnesse" />-->
+	  <call target="runSourceMonitor" />
+
+	<call target="runConfiability" />
+    <call target="runAtomiq" />
+
+
+	  
+	  <!-- call target="createDocumentation" / -->
+    
+  </target>
+
+  <target name="local.tivit">
+
+    <property name="folder.config.env" value="dev" />
+    <property name="CCNetLabel" value="1.0.0.0" />
+    <property name="tools.base.dir" value="${path::combine(base.path,'Tools')}" overwrite="true" />
+
+
+    <!--<property name="nant.settings.currentframework" value="net-4.0" dynamic="true"/>
+    <property name="MSBuild" value="${framework::get-framework-directory('net-4.0')}\msbuild.exe" dynamic="true"/>-->
+
+    <call target="initializeTools" />
+    <!-- call target="build" /  -->
+    <!--<call target="createZipFolder" />
+    <call target="createSourceZipFile" />-->
+
+	  <call target="runConfiability" />
+
+	  <!--call target="calculate.partcover" />
+    <call target="generate.reportgenerator.report" / -->
+
+    <!-- call target="runAtomiq" / -->
+
+	  <!-- call target="local.dev" / -->
+  </target>
+
+
+
+  <!-- /////////////////////////////  BUILD SCRIPTS ///////////////////////    -->
+
+  <target name="build">
+    <echo message="Base Path: ${base.path}" />
+    <echo message="Base Path Parent: ${base.path.parent} " />
+    <echo message="Base Path Build: ${base.path.build}" />
+    <echo message="Base Path Dist: ${base.path.build.release}" />
+    <echo message="Base Path Source: ${base.path.build.source}" />
+    <echo message="Building with: ${MSBuild}" />
+    <call target="createBuildFolder" />
+    <call target="createSourceFolder" />
+    <call target="copySourceFiles" />
+    <call target="createReleaseFolder" />
+    <call target="updateAssemblyInfo" />
+
+    <call target="createZipFolder" />
+    <call target="createSourceZipFile" />
+
+    <call target="compile" />    
+    <call target="copyToDistFolder" />
+    <call target="cleanupUnsedAfterBuild"/>
+    <!--<call target="deleteSourceFolder" />-->
+  </target>
+
+  <target name="compile">
+    <exec program="${MSBuild}" output="${path::combine(base.path.parent, 'msbuild_log.xml')}" failonerror="true">
+      <arg value="${path::combine(base.path.build.source, 'NARToolkit.sln')}"/>
+      <arg line="/p:GenerateDocumentation=true;Configuration=Release;MSBuildExtensionsPath=&quot;C:\Program Files\MSBuild\" />
+      <!--arg line="/p:Configuration=Release;MSBuildExtensionsPath=&quot;C:\Arquivos de Programas\MSBuild\&quot;" /  -->
+    </exec>
+  </target>
+  
+  <target name="createBuildFolder">
+    <delete dir="${base.path.build}" failonerror="false"/>
+    <mkdir dir="${base.path.build}"/>
+  </target>
+
+  <target name="createSourceFolder">
+    <delete dir="${base.path.build.source}"/>
+    <mkdir dir="${base.path.build.source}"/>
+  </target>
+
+  <target name="deleteSourceFolder">
+    <delete dir="${base.path.build.source}"/>
+  </target>
+
+  <target name="copySourceFiles">
+    <copy todir="${base.path.build.source}" >
+      <fileset basedir="${base.path}" defaultexcludes="true">
+        <include name="**/*" />
+        <exclude name="*.build" />
+        <exclude name="**/build/**" />
+        <exclude name="tools/**" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="createReleaseFolder">
+    <delete dir="${base.path.build.release}"/>
+    <mkdir dir="${base.path.build.release}"/>
+  </target>
+  
+  <target name="updateAssemblyInfo">
+    <echo message="Version:${string::trim(CCNetLabel)}" />
+    <foreach item="File" property="iterator.asm-info">
+      <in>
+        <items>
+          <include name="${base.path.build.source}\*\Properties\AssemblyInfo.cs" />
+        </items>
+      </in>
+      <do>
+        <asminfo output="${iterator.asm-info}" language="CSharp">
+          <imports>
+            <import namespace="System" />
+            <import namespace="System.Reflection" />
+            <import namespace="System.Runtime.InteropServices" />
+          </imports>
+          <attributes>
+            <attribute type="ComVisibleAttribute" value="false" />
+
+            <attribute type="AssemblyVersionAttribute"
+                       value="${string::trim(CCNetLabel)}" />
+
+            <attribute type="AssemblyCopyrightAttribute"
+                       value="Copyright Thoris" />
+          </attributes>
+        </asminfo>
+      </do>
+    </foreach>
+  </target>
+
+  <target name="cleanupUnsedAfterBuild">
+    <delete>
+      <fileset>
+        <include name="${base.path.build.release}\**.cs" />
+        <include name="${base.path.build.release}\**.vb" />
+        <include name="${base.path.build.release}\**.sln" />
+        <include name="${base.path.build.release}\**.csproj" />
+        <include name="${base.path.build.release}\**.vbproj" />
+        <include name="${base.path.build.release}\**.csproj.*" />
+        <include name="${base.path.build.release}\**.vbproj.*" />
+        <include name="${base.path.build.release}\connect.config" />
+        <include name="${base.path.build.release}\App.config" />
+        <include name="${base.path.build.release}\**.pdb" />
+        <include name="${base.path.build.release}\bin\**.pdb" />
+        <include name="${base.path.build.release}\bin\**.xml" />
+      </fileset>
+    </delete>
+    <delete dir="${base.path.build.release}\obj" if="${directory::exists(path::combine(task.path, 'obj'))}" />
+    <delete dir="${base.path.build.release}\Properties" if="${directory::exists(path::combine(task.path, 'Properties'))}" />
+  </target>
+
+  <target name="copyToDeploymentSite">
+    <echo message="Deploying from ${base.path.build.release} to : ${deployment.site}" />
+    <copy todir="${deployment.site}" >
+      <fileset basedir="${base.path.build.release}" defaultexcludes="true">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="copyToDistFolder">
+    <echo message="From: ${task.path}" />
+    <echo message="To: ${base.path.build.release}" />
+    <copy todir="${base.path.build.release}" >
+      <fileset basedir="${task.path}" defaultexcludes="true">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="onFail" if="${mail.onFailure}">
+    <!--
+    <mail mailhost="${mail.server}" 
+      tolist="${mail.toFailList}" 
+      from="nant@localhost.com" 
+      subject="${project::getName()} Build Failure" 
+      message="${mail.failMessage}" />
+    -->
+  </target>
+
+  <target name="onSuccess" if="${mail.onSuccessfull}">
+    <echo message="OnSuccess called" />
+
+    <!--
+    <mail mailhost="${mail.server}"
+      tolist="${mail.toSuccessList}"
+      from="nant@localhost.com"
+      subject="${project::get-name()} Build ${CCNetLabel} Succeded"
+      message="">
+
+    </mail>
+    -->
+  </target>
+
+  <!-- /////////////////////////////  CONFIG COPY ///////////////////////    -->
+
+  <target name="copyConfigs">
+    <property name="config.path.app" value="${path::combine(base.path.build.release, 'configs')}" />
+    <property name="config.path.app" value="${path::combine(config.path.app, folder.config.env)}" overwrite="true"/>
+
+    <echo message="copy to ${base.path.build.release}" />
+    <echo message="copy from ${config.path.app}')}" />
+    <copy todir="${base.path.build.release}" overwrite="true">
+      <fileset basedir="${config.path.app}" defaultexcludes="true">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+
+    <delete dir="${path::combine(base.path.build.release, 'configs')}" />
+
+  </target>
+
+  <!-- /////////////////////////////  IMAGE BACKGROUND COPIES ///////////////////////    -->
+
+  <target name="copyImageFiles">
+    <property name="config.path.images" value="${path::combine(base.path.build.release, 'images')}" />
+    <property name="config.path.images" value="${path::combine(config.path.images, folder.config.env)}" overwrite="true"/>
+    
+    <echo message="copy to ${path::combine(base.path.build.release, 'images')}" />
+    <echo message="copy from ${config.path.images}" />
+    <copy todir="${path::combine(base.path.build.release, 'images')}" overwrite="true">
+      <fileset basedir="${config.path.images}" defaultexcludes="true">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+
+    <delete dir="${config.path.images}" />
+
+  </target>
+    
+  <!-- /////////////////////////////  LOG VIEW COPY CONFIGS ///////////////////////    -->
+
+  <target name="copyLogViewConfigs">
+
+    <property name="logviewer.path" value="${path::combine(base.path.build.release, 'LogviewApp')}" />
+
+    <property name="logviewer.path.configs" value="${path::combine(logviewer.path, 'Configs')}" />
+    <property name="logviewer.path.configs" value="${path::combine(logviewer.path.configs, folder.config.env)}" overwrite="true"/>
+
+    <echo message="copy to ${logviewer.path}" />
+    <echo message="copy from ${logviewer.path.configs}" />
+    <copy todir="${logviewer.path}" overwrite="true">
+      <fileset basedir="${logviewer.path.configs}" defaultexcludes="true">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+
+    <delete dir="${path::combine(logviewer.path, 'Configs')}" />
+
+  </target>
+  
+
+  <!-- /////////////////////////////  DB DEPLOY SCRIPTS ///////////////////////    -->
+
+
+  <target name="runDatabaseScripts" description="generate a sql upgrade script">
+
+    <property name="dbConnection" value="Server=${db.servername};Initial Catalog=${db.initialcatalog};${db.credentials}" />
+
+    <echo message="dbConnection=${dbConnection}" />
+    <dbdeploy dbType="mssql"
+              dbConnection="${dbConnection}"
+              dir="${database.scripts.path}"
+              outputFile="${database.scripts.path}/output.sql"
+              undoOutputFile="${database.scripts.path}/output.sqloutput-undo.sql"
+              changeLogTable="${database.scripts.changeLogTable} "/>
+
+    <sql connstring="Provider=SQLOLEDB;Data Source=${db.servername};Initial Catalog=${db.initialcatalog};Persist Security Info=True;${db.credentials}"
+     transaction="true"
+     delimiter="GO"
+     delimstyle="Line"
+     batch="false"
+     source="${database.scripts.path}/output.sql"
+     output="${database.scripts.path}/results.txt" />
+
+
+
+  </target>
+
+  <!-- /////////////////////////////  NUNIT SCRIPTS ///////////////////////    -->
+  
+  <target name="createNunitFolder">
+    <delete dir="${base.path.build.nunit}" failonerror="false"/>
+    <mkdir dir="${base.path.build.nunit}"/>
+  </target>
+
+
+  <target name="unitTests" >
+
+    <echo message="Base Dir: ${path::combine(base.path.build.tests.application, 'bin\Release')}" />
+    <echo message="Testing File: ${file.tests.application}" />
+    <echo message="Saving output: ${base.path.build.nunit}" />
+
+    <nunit2 failonerror="true" verbose="true">
+      <formatter type="Xml" usefile="false" extension=".xml" outputdir="${base.path.build.nunit}" />
+      <test>
+        <assemblies basedir="${path::combine(base.path.build.tests.application, 'bin\Release')}">
+          <include name="${file.tests.application}" />
+        </assemblies>
+      </test>
+    </nunit2>
+  </target>
+
+
+  <target name="unitTestsReport" >
+
+    <call target="createNunitFolder" />
+
+    <echo message="Base Dir: ${path::combine(base.path.build.tests.application, 'bin\Release')}" />
+    <echo message="Testing File: ${file.tests.application}" />
+    <echo message="Saving output: ${base.path.build.nunit}" />
+
+    <!--<nunit2 failonerror="true" verbose="true">-->
+    <nunit2 failonerror="false" verbose="true">
+      <formatter type="Xml" usefile="true" extension=".xml" outputdir="${base.path.build.nunit}" />
+      <test>
+        <assemblies basedir="${path::combine(base.path.build.tests.application, 'bin\Release')}">
+          <include name="${file.tests.application}" />
+        </assemblies>
+      </test>
+    </nunit2>
+
+    <call target="generate.nunit.report" />
+    
+  </target>
+  
+  <target name="generate.nunit.report">
+
+    <echo message="Generating file: ${tests.results.html.output}" />
+    <echo message="Using Xml file: ${file.tests.results.fullpath}" />
+    <echo message="Using Summary Xml file: ${file.tests.application.summary}" />
+
+    <nunit2report out="${tests.results.html.output}">
+      <fileset>
+        <include name="${file.tests.results.fullpath}" />
+      </fileset>
+      <summaries>
+        <include name="${file.tests.application.summary}" />
+      </summaries>
+    </nunit2report>
+  </target>
+
+
+
+
+  <!-- /////////////////////////////  PART COVER ///////////////////////    -->
+
+
+  <target name="createCoverageFolder">
+    <delete dir="${base.path.build.coverage}" failonerror="false"/>
+    <mkdir dir="${base.path.build.coverage}"/>
+  </target>
+
+  <target name="calculate.partcover" description="Calculate Code Coverage from application" verbose="true">
+
+    <call target="createCoverageFolder" />
+
+    <property name="coverage.file.application" value="${path::combine(base.path.build.tests.application, 'bin\Release')}\${file.tests.application}" />
+
+    <echo message="PartCover Base dir: ${partcover.base.dir}" />
+    <echo message="PartCover Application: ${partcover.exe}" />
+    <echo message="Target-> Nunit application: ${nunit.exe} "/>
+    <echo message="Target Work Dir: ${nunit.base.dir}" />
+    <echo message="Application File: ${coverage.file.application}" />
+    <echo message="Output File: ${path::combine(base.path.build.coverage,coverage.result.file)}" />
+    <echo message="Assembly to build: ${include.coverage.assembly}" />
+   
+    
+    <exec program="${partcover.exe}" workingdir="${partcover.base.dir}" failonerror="false">
+      <arg value="--target &quot;${nunit.exe}&quot;" />
+      <arg value="--target-work-dir &quot;${nunit.base.dir}&quot;"/>
+      <arg value="--target-args &quot;${coverage.file.application}&quot;" />
+      <!--<arg value="- -include &quot;[${include.coverage.assembly}]*&quot;" />-->
+      <arg value="--include &quot;[*]*&quot;" />
+      <arg value="--exclude &quot;[Coverage.*Test*]*&quot;" />
+      <arg value="--exclude &quot;[NPOI*]*&quot;" />
+      <arg value="--exclude &quot;[EO.Web*]*&quot;" />
+      <arg value="--exclude &quot;[nunit*]*&quot;" />
+      <arg value="--exclude &quot;[ISymWrapper*]*&quot;" />
+      <arg value="--exclude &quot;[Rhino.Mocks*]*&quot;" />
+      <arg value="--exclude &quot;[NAR.Tests]*&quot;" />
+      <arg value="--exclude &quot;[Accessibility.CAccPropServicesClass*]*&quot;" />
+      <arg value="--exclude &quot;[pnunit.framework.*]*&quot;" />
+      <arg value="--exclude &quot;[pnunit-agent.*]*&quot;" />
+      <arg value="--output &quot;${path::combine(base.path.build.coverage,coverage.result.file)}&quot;" />
+    </exec>
+  
+  </target>
+
+  <target name="generate.reportgenerator.report" dependsOnTargets="calculate.partcover">
+    <echo message="Application: ${reportgenerator.exe}" />
+    <echo message="Reading File: ${path::combine(base.path.build.coverage,coverage.result.file)}" />
+    <echo message="Creating folder: ${coverage.reports.dir.root}\Coverage\" />
+    <echo message="Base Coverage path: ${base.path.build.coverage}" />
+    <exec program="${reportgenerator.exe}" commandline="&quot;${path::combine(base.path.build.coverage,coverage.result.file)}&quot;    &quot;${base.path.build.coverage}&quot;" />
+  </target>
+
+
+
+  <!-- /////////////////////////////  NETWORK DEPLOYMENT ///////////////////////    -->
+
+  <target name="deployToNetworkServer">
+    <property name="netdrive" value="" />
+
+    <call target="connectToNetworkServer" />
+    <call target="changeApplicationStatusDown" />
+    <!--<call target="backupCurrentApplication" />-->
+    <call target="copyFilesToNetworkServer" />
+    <call target="changeApplicationStatusUp" />
+    <call target="disconnectToNetworkServer" />
+  </target>
+
+  <target name="changeApplicationStatusDown" dependsOnTargets="connectToNetworkServer">
+    <property name="deployment.maintenance.file" value="${path::combine(netdrive, server.deploy.maintenance.file)}" />
+    <echo message="Changing maintenance file ${deployment.maintenance.file} to app_offline.htm" />
+    <if test="${file::exists(deployment.maintenance.file)}">
+      <move file="${deployment.maintenance.file}" tofile="${path::combine(netdrive, 'app_offline.htm')}" />
+    </if>
+  </target>
+
+  <target name="changeApplicationStatusUp" dependsOnTargets="changeApplicationStatusDown">
+    <echo message="Changing maintenance file app_offline.htm to ${deployment.maintenance.file}" />
+    <if test="${file::exists(path::combine(netdrive, 'app_offline.htm'))}">
+      <move file="${path::combine(netdrive, 'app_offline.htm')}" tofile="${deployment.maintenance.file}" />
+    </if>
+  </target>
+
+  <target name="backupCurrentApplication" dependsOnTargets="connectToNetworkServer">
+    <property name="server.deploy.backup.fullfolder" value="${path::combine(netdrive, server.deploy.backup.folder)}" />
+    <property name="folder.date" value="${ string::replace(string::replace(string::replace(datetime::to-string(datetime::now()),'/','_'),' ','_'),':','_')}" />
+    <property name="server.deploy.backup.fullfolder.new" value="${path::combine(server.deploy.backup.fullfolder, folder.date)}" />
+    <if test="${not directory::exists(server.deploy.backup.fullfolder)}">
+      <mkdir dir="${server.deploy.backup.fullfolder}"/>
+    </if>
+    <delete dir="${server.deploy.backup.fullfolder.new}"/>
+    <mkdir dir="${server.deploy.backup.fullfolder.new}"/>
+    <echo message="Copying files from ${netdrive} to ${server.deploy.backup.fullfolder}" />
+    <copy todir="${server.deploy.backup.fullfolder.new}" verbose="false">
+      <fileset basedir="${netdrive}">
+        <include name="**/*" />
+        <exclude name="${server.deploy.backup.folder}/**" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="copyFilesToNetworkServer" dependsOnTargets="connectToNetworkServer">
+    <echo message="Copying files from ${base.path.build.release} to ${netdrive}" />
+    <copy todir="${netdrive}" verbose="false">
+      <fileset basedir="${base.path.build.release}">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="connectToNetworkServer">
+    <property name="cmduse.output" value="${path::get-temp-file-name()}" />
+    <property name="server.deploy.fullfolder" value="\\${server.deploy.hostname}\${server.deploy.drive}$\${server.deploy.folder}" />
+    <exec program="cmd" commandline="/c net use * &quot;${server.deploy.fullfolder}&quot; &quot;${server.deploy.password}&quot; /USER:${server.deploy.username}  " output="${cmduse.output}" verbose="false" />
+    <foreach item="Line" in="${cmduse.output}" property="cmduse.output.line">
+      <do>
+        <if test="${string::contains(cmduse.output.line, 'A unidade ')}">
+          <regex pattern="A unidade (?'netdrive'[A-Za-z]\:)" input="${cmduse.output.line}"  />
+        </if>
+      </do>
+    </foreach>
+    <echo message="Drive: ${netdrive} is connected." />
+  </target>
+
+  <target name="disconnectToNetworkServer" dependsOnTargets="connectToNetworkServer">
+    <exec program="cmd" commandline="/c net use ${netdrive} /delete" />
+  </target>
+
+  <!-- /////////////////////////////  DOCUMENTATION ///////////////////////    -->
+
+  <target name="createDocumentation" >
+    <echo message="Creating documentation using ${sandcastle.build}" />
+    <echo message="Working folder: ${sandcastle.working}"/>
+    <echo message="Project Folder: ${sandcastle.project.folder}"/>
+    <echo message="Sandcastle file project: ${sandcastle.project.folder.file}"/>
+    <echo message="Target folder: ${sandcastle.target.folder}" />
+
+    <delete dir="${sandcastle.target.folder}" failonerror="false"/>
+    <mkdir dir="${sandcastle.target.folder}"/>
+
+    <exec program="${sandcastle.build}" >
+      <arg value="${sandcastle.project.folder.file}" />
+    </exec>
+
+    <copy todir="${sandcastle.target.folder}" >
+      <fileset basedir="${path::combine(sandcastle.project.folder, 'Help')}" defaultexcludes="true">
+        <include name="**/*" />
+      </fileset>
+    </copy>
+
+
+  </target>
+  <!-- /////////////////////////////  FXCOP ///////////////////////    -->
+
+  <target name="createFxCopFolder">
+    <delete dir="${fxcop.output.dir}" failonerror="false"/>
+    <mkdir dir="${fxcop.output.dir}"/>
+  </target>
+
+
+  <target name="generateFxCopReporting" failonerror="false" >
+
+    <call target="createFxCopFolder" />
+    
+    <echo message="Application: ${fxcopcmd.exe}" />
+    <echo message="Project Name: ${fxcop.project.name}" />
+    <echo message="Results: ${fxcop.xml}" />
+    
+    <exec program="${fxcopcmd.exe}" commandline="/p:&quot;${fxcop.project.name}&quot; /o:&quot;${fxcop.xml}&quot; /searchgac " failonerror="false"/>
+  </target>
+
+  
+  <!-- /////////////////////////////  FTP DEPLOYMENT ///////////////////////    -->
+  
+  <target name="deployToFtp">
+
+    <connection id="ftp-transfer-connection"
+      server="${project.deployment.ftp.server}"
+      username="${project.deployment.ftp.user}"
+      password="${project.deployment.ftp.password}"
+    />
+
+    <ftp connection="ftp-transfer-connection"
+         showdironconnect="false"
+         createdirs="true"
+         verbose="false"
+         exec="true"
+         logfiles="true"
+       >
+
+      <put type="bin"
+           localdir="${base.path.build.release}"
+           remotedir="${project.deployment.path.remote}"
+           flatten="false"
+         >
+        <include name="**/*" />
+        <!--<include name="**\bin\**" />
+        <include name=".\*.svc" />
+        <include name=".\web.config" />-->
+      </put>
+    </ftp>
+    <!-- Deploy configuration -->
+    <!--<call target="deploy-configuration" />-->
+    
+  </target>
+
+
+
+
+  <!-- /////////////////////////////  SOURCE MONITOR ///////////////////////    -->
+
+  <target name="createSourceMonitorFolder">
+    <delete dir="${sourcemonitor.output.dir}" failonerror="false"/>
+    <mkdir dir="${sourcemonitor.output.dir}"/>
+  </target>
+
+  <target name="runSourceMonitor">
+
+    <echo message="Analyzing the source code" />
+    <echo message="Source Monitor Base: ${sourcemonitor.base.dir}" />
+    <echo message="Source Monitor Application: ${sourcemonitor.exe}" />
+    <echo message="Source Monitor Command File: ${sourcemonitor.command}" />
+    <echo message="Source Monitor Output: ${sourcemonitor.output.dir}" />
+
+	
+	<call target="createSourceMonitorFolder" />
+	
+	
+	<echo file="commandSourceMonitor.xml"> 
+	<![CDATA[<?xml version='1.0' encoding='UTF-8' ?>
+	<sourcemonitor_commands>
+	  <write_log>false</write_log>
+	  <command>
+		<project_file>TempProject.smproj</project_file>
+		<project_language>CSharp</project_language>
+		<source_directory>..\</source_directory>
+		<include_subdirectories>true</include_subdirectories>
+		<parse_utf8_files>True</parse_utf8_files>
+		<file_extensions>*.cs|*.designer.cs,AssemblyInfo.cs,*Tools</file_extensions>    
+		<export>
+		  <export_file>SourceMonitorDetailedOutput.xml</export_file>
+		  <export_type>2</export_type>
+		</export>
+	  </command>
+	</sourcemonitor_commands>
+	]]> 
+	</echo>	
+	
+	
+	<echo message="Analyzing the source code" />
+	
+    <!-- SourceMonitor Metrics -->
+    <exec program="${sourcemonitor.exe}" >
+      <arg value="/C commandSourceMonitor.xml" />
+    </exec>
+
+	<echo message="Transforming the result" />
+	
+	
+	<copy todir="${sourcemonitor.output.dir}" >
+      <fileset basedir="." defaultexcludes="true">
+        <include name="TempProject.smproj" />
+		<include name="SourceMonitorDetailedOutput.xml" />
+      </fileset>
+    </copy>		
+	
+	<style style="${sourcemonitor.base.dir}\SourceMonitorSummaryGeneration.xsl" in="${sourcemonitor.output.dir}\SourceMonitorDetailedOutput.xml" out="${sourcemonitor.output.dir}\sm_top15.xml" />
+	<style style="${sourcemonitor.base.dir}\Sourcemonitor-group-by-file.xsl" in="${sourcemonitor.output.dir}\SourceMonitorDetailedOutput.xml" out="${sourcemonitor.output.dir}\sm_byfile.xml" />
+	<style style="${sourcemonitor.base.dir}\Sourcemonitor-group-by-metric.xsl" in="${sourcemonitor.output.dir}\SourceMonitorDetailedOutput.xml" out="${sourcemonitor.output.dir}\sm_bymetric.xml" />
+	
+	<echo message="Cleaning the files" />
+	
+
+	
+    <delete>
+      <fileset>
+		<include name="SourceMonitorDetailedOutput.xml" />
+        <include name="commandSourceMonitor.xml" />
+        <include name="TempProject.smproj" />        
+      </fileset>
+    </delete>	
+	
+  </target>
+
+
+  <!-- /////////////////////////////  FITNESSE ///////////////////////    -->
+
+  <property name="fitnesse.dir" value="D:\Thoris\Projetos\CI\CISample\Tools\Fitnesse" />
+  <property name="fitnesse.server" value="localhost" />
+  <property name="fitnesse.port" value="8888" />
+  <target name="fitnesse">
+    <exec program="${fitnesse.dir}\Runner.exe"
+      commandline="-r fitnesse.fitserver.TestRunner,D:\Thoris\Projetos\CI\CISample\Tools\Fitnesse\fit.dll
+    ${fitnesse.server} ${fitnesse.port} ${fitnesse.test}"
+          workingdir="${fitnesse.dir}"/>/>
+  </target>
+
+
+  <!-- /////////////////////////////  SIMIAN ///////////////////////    -->
+
+  <target name="createSimianFolder">
+    <delete dir="${simian.output.dir}" failonerror="false"/>
+    <mkdir dir="${simian.output.dir}"/>
+  </target>
+
+  <target name="runSimian">
+    
+    <echo message="Analyzing the source code by Simian" />
+    <echo message="Simian Base: ${simian.base.dir}" />
+    <echo message="Simian Application: ${simian.exe}" />
+    <echo message="Simian Output: ${simian.output.dir}" />
+
+    <call target="createSimianFolder" />
+  
+    <exec program="${simian.exe}">
+      <arg value="-includes=**\*.cs"/>
+      <arg value="-excludes=**\*.Designer.cs" />
+      <arg value="-formatter=xml:${simian.output.dir}\simian.xml"/>
+    </exec>
+    
+  </target>
+
+  <!-- /////////////////////////////  ZIP SOURCE CODE/APPLICATION ///////////////////////    -->
+  <target name="createZipFolder">
+    <delete dir="${zip.output.dir}" failonerror="false"/>
+    <mkdir dir="${zip.output.dir}"/>
+  </target>
+
+  <target name="createSourceZipFile">
+	<echo message="Compressing the folder: ${base.path.build.source}" />
+    <zip zipfile="${zip.output.dir}\source-${string::trim(CCNetLabel)}.zip">
+      <fileset basedir="${base.path.build.source}">
+        <include name="**/*" />
+      </fileset>    
+    </zip>
+  </target>
+
+  <target name="createDistributionZipFile">
+	<echo message="Compressing the folder: ${base.path.build.release}" />
+	<zip zipfile="${zip.output.dir}\dist-${string::trim(CCNetLabel)}.zip">
+      <fileset basedir="${base.path.build.release}">
+        <include name="**/*" />        
+      </fileset>
+    </zip>
+  </target>
+
+
+  <!-- /////////////////////////////  ATOMIQ ///////////////////////    -->
+  <target name="createAtomiqFolder">
+    <delete dir="${atomiq.output.dir}" failonerror="false"/>
+    <mkdir dir="${atomiq.output.dir}"/>
+  </target>
+
+
+
+  <target name="runAtomiq" failonerror="false">
+    <echo message="Running Atomiq Console application" />
+	<property name="atomiq.command" value="-project ${atomiq.projectfile} -output ${atomiq.output.file} -blockNumMax 15 -blockSizeMax 40 -totalDupeLinesMax 200" dynamic="true"/>
+
+	<echo message="Atomiq Base dir: ${atomiq.base.dir}" />
+    <echo message="Atomiq Exe: ${atomiq.exe}" />
+    <echo message="Atomiq Project File: ${atomiq.projectfile}" />
+    <echo message="Atomiq Output Dir: ${atomiq.output.dir}" />
+    <echo message="Atomiq Output File: ${atomiq.output.file}" />
+    <echo message="Atomiq Command: ${atomiq.command}" />
+
+
+    <call target="createAtomiqFolder" />
+
+
+    <exec
+     program="${atomiq.exe}"
+     commandline="${atomiq.command}"
+     timeout="30000"
+     failonerror="false"
+     resultproperty="returnCode">
+    </exec>
+    <fail if="${returnCode != '0'}" message="${returnCode}" />
+  </target>
+
+  <!-- /////////////////////////////  VIL ///////////////////////    -->
+  <!--<property name="vil.assemblies" value="comma,separated,list,of,assemblies,to,analyze (full path)" />
+
+  <target name="vil">
+    <exec program="${vil.executable}" commandline='/a="${vil.assemblies}" /outxml="${results.dir}results-vil.xml" /m classes,enumerations,structs,types,LOC,events,impInterfaces,WMC,DIT,CBO,RFC,NOC,constructors,methods,imps,fields,properties /sc=type' failonerror="false"/>
+  </target>-->
+
+	
+	
+	
+	<!-- /////////////////////////////  CONFIABILITY ///////////////////////    -->
+	<target name="createConfiabilityFolder">
+		<delete dir="${confiability.output.dir}" failonerror="false"/>
+		<mkdir dir="${confiability.output.dir}"/>
+	</target>
+
+	<target name="runConfiability" failonerror="false">
+		<echo message="Running Confiability Console application" />
+		<property name="confiability.command" value=" -o=${confiability.output.dir} -f=2 -t=10 -l=${confiability.base.dir}\Resources\List" dynamic="true"/>
+
+		<echo message="Confiability Base dir: ${confiability.base.dir}" />
+		<echo message="Confiability Exe: ${confiability.exe}" />
+		<echo message="Confiability Output Dir: ${confiability.output.dir}" />
+		<echo message="Confiability Command: ${confiability.command}" />
+
+
+		<call target="createConfiabilityFolder" />
+
+
+		<exec
+		 program="${confiability.exe}"
+		 commandline="${confiability.command}"
+		 timeout="3000000"
+		 failonerror="false"
+		 resultproperty="returnCode">
+		</exec>
+		<fail if="${returnCode != '0'}" message="${returnCode}" />
+	</target>
+
+</project>
+
+
